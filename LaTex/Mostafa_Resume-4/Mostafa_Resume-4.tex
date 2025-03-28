@@ -1,0 +1,154 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{enumitem, hyperref, graphicx, xcolor, multicol, titlesec, parskip}
+\usepackage{fancyhdr}
+\usepackage{array}
+
+% Modern font setup (closest to Inter/Montserrat strategy available in standard LaTeX)
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}      % TeX Gyre Heros - modern sans-serif similar to Helvetica Neue
+\usepackage{textcomp}
+\renewcommand{\familydefault}{\sfdefault}  % Default to sans serif
+
+% Larger text for name
+\newcommand{\largetext}{\fontsize{18}{22}\selectfont}
+
+% Section title formatting (as in Montserrat style)
+\titleformat{\section}
+    {\Large\bfseries\selectfont} % 14pt bold
+    {}
+    {0em}
+    {}
+    [\vspace{-0.5em}]
+
+% Reduce spacing for sections
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.25}  % Line spacing as recommended: 1.25
+
+%---------------------------------------------------------------------
+\begin{document}
+
+%=========================================
+% Header with two-column format
+\noindent
+
+\begin{tabular}{@{}p{3.5in} p{3.5in}@{}}
+
+    {\largetext\bfseries Mostafa Rezaee, Ph.D.} & \hfill \href{https://www.linkedin.com/in/mostafa-rezaee/}{LinkedIn} \textbar{} Data Scientist \textbar{} ML Engineer \\
+    
+    \hline 
+    
+    {\bfseries Ph.D. in Data Science} \textbar{} M.Sc. \& B.Sc. in Physics & \hfill \texttt{mostam@bgsu.edu} \textbar{} (419) 315-7481 \textbar{} Open to relocation.
+
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Summary}
+
+\begin{itemize}
+
+    \item Green Card Holder
+    
+    \item Ph.D. in Data Science
+    
+    \item \textbf{ML Engineer} \\     
+    Deployed and monitored scalable ML models as REST APIs using FastAPI, Docker, PostgreSQL, Prometheus, and Grafana, with automated CI/CD via GitHub Actions.
+    
+    \item \textbf{Data Scientist} \\ 
+    Developed \href{http://savebirds.app/}{www.SaveBirds.app}, a first-of-its-kind data science web app processing 56 years of data on 800 bird species across 300,000, fueling the \href{https://www.usgs.gov/centers/eesc/science/north-american-breeding-bird-survey#:%7E:text=common%20and%20helping-,fuel%20a%20%2475%20billion%20wildlife%20watching%20industry,-.%C2%A0%C2%A0Each%20year%20thousands:~:text=helping%20fuel%20a%20%2475%20billion%20wildlife%20watching%20industry}{\$75 billion} wildlife-watching industry, reducing analysis time from weeks to minutes, enabling rapid assessment of 40,000+ Protected Areas, and supporting 7 projects with 10 researchers from 6 institutions.  
+    
+    \item \textbf{AI Scientist} \\
+    Enhanced wearable medical device analytics, improving gait speed accuracy by 25\%, step segmentation precision by 57\%, step length estimation by 29\%, and sway detection accuracy by 46\%, while optimizing data processing time by 45\% on 1.2M data points. 
+    
+    \item \textbf{Lead Data Scientist} \\
+    Led the provincial implementation of a nationwide data digitization project for 1,000,000+ students, 40,000 classrooms, and 76,000 teachers across 40 districts, supervising 100+ analysts, improving data accuracy by 40\%, enabling real-time updates, and deploying automated alerts for data-driven policy decisions.
+
+    \item \textbf{Publications \& projects } \\
+    - Publications (34), including 12 Journal articles \& 22 full conference papers. \\    
+    - Generative AI in Computer Vision \\    
+    - Projects (7) outlined in the SaveBirds.app involving 10 researchers from 6 institutions. \\     
+    - All publications and projects are computational studies employing modeling and simulation approaches developed entirely through my own original code, rather than relying on existing software.     
+ 
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Professional Experience}
+
+\vspace{6pt}
+%*****************************************
+\hspace{3mm} {\bfseries Machine Learning Engineer}, Stealth Startup, California, USA \hfill \textit{May 2024 -- Present}
+
+\begin{itemize}
+
+    \item Deployed scalable ML models as REST APIs using FastAPI and Docker.
+    
+    \item Implemented real-time monitoring with Prometheus and Grafana.
+    
+    \item Automated ML workflows with CI/CD pipelines.
+
+\end{itemize}
+
+\vspace{6pt}
+%*****************************************
+\hspace{3mm} {\bfseries Data Scientist}, SaveBirds, Ohio, USA \hfill \textit{Sep. 2019 -- May 2024}
+
+\begin{itemize}
+
+    \item Developed \href{http://www.savebirds.app}{SaveBirds.app} to reduce data processing time by 99\%.
+    
+    \item Created the Bird Atlas Generator (BAG), making atlas creation accessible without GIS expertise.
+    
+    \item Automated biodiversity metrics for 40,000 Protected Areas.
+
+\end{itemize}
+
+\vspace{6pt}
+%*****************************************
+\hspace{3mm} {\bfseries AI Scientist}, Sanofi, Cambridge, MA, USA \hfill \textit{Jun. 2022 -- Aug. 2022}
+
+\begin{itemize}
+
+    \item Improved gait speed accuracy by 25\% using LSTMs.
+    
+    \item Minimized False Positives in Sway Detection: Improved accuracy in detecting sway by 46\% (65\% to 95\%), reducing false alarms from 22\% to 15\%. (Technology: Bayesian Filtering, Adaptive Thresholding, Time-Series Anomaly Detection)
+    
+    \item Optimized Data Pipeline: Accelerated preprocessing of 1.2 million accelerometer data points, reducing processing time by 45\% (9.2s to 5.1s). (Technology: Apache Spark, Feature Engineering)
+
+\end{itemize}
+
+\vspace{6pt}
+%*****************************************
+\hspace{3mm} {\bfseries Lead Data Scientist \& Deputy Director of Research and Technology}, Farabi Inst. \hfill \textit{Sep. 2013 -- May 2022}
+
+\begin{itemize}
+    
+    \item Led the provincial implementation of a nationwide data digitization project, transforming the educational ecosystem for over 1,000,000 students, 40,000 classrooms, and 76,000 teachers across 40 districts.
+   
+    \item Supervised a team of 100+ data analysts directly reporting to me, ensuring standardized, high-quality data collection and analysis at scale.
+    
+    \item Enhanced data accuracy by 40\% and established real-time updates, allowing instant visibility into changes in student, teacher, and school profiles.
+    
+    \item Applied advanced regression, classification, and time series analyses to derive actionable insights, guiding data-driven policy decisions for senior authorities
+    
+    \item Developed an automated alert system that identified significant performance shifts, prompting timely interventions and continuous improvement throughout the education system.
+    
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education \& Skills}
+
+\begin{itemize}
+    
+    \item {\bfseries Data Science, Ph.D.}, Bowling Green State University, Ohio, USA \hfill \textit{Sep. 2019 -- May 2024}
+    
+    \item Physics, M.Sc., Focusing on Nonlinear Optics, specifically thermal effects in Green Lasers.
+    
+    \item {\bfseries Skills:} Computer Vision, NLP, LLMs, RAG, Python (TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, ipywidgets, GeoPandas), R, SQL, C++, FORTRAN, MATLAB, High-Performance Computing (HPC), Apachi, Hadoop.
+    
+\end{itemize}
+
+\end{document}
+%---------------------------------------------------------------------
