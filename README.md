@@ -1,12 +1,12 @@
-<h1 align="center">ATS-Friendly Resume Formatting Best Practices</h1>
-
 ## 🧰 How to Use This Template    
-
 Click the green **"Use this template"** button at the top of the page, then choose **"Create a new repository"**.   
-
 This will create your own copy of this project, which you can modify freely — no need to fork!   
 
 ---
+
+
+<h1 align="center">ATS-Friendly Resume Formatting Best Practices</h1>
+
 
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions.
 
@@ -24,14 +24,11 @@ This repository provides comprehensive resources and practical guidance for crea
  
 
 <details>
-  <summary><a href="#2-latex-on-windows-wsl-and-vs-code"><i><b>2. LaTeX on Windows, WSL, and VS Code</b></i></a></summary>
+  <summary><a href="#2-latex-environment-options"><i><b>2. LaTeX Environment Options</b></i></a></summary>
   <div>
-              <a href="#21-latex-on-local-vs-overleaf">2.1. LaTeX on Local vs. Overleaf</a><br>
-              <a href="#22-check-if-latex-is-installed">2.2. Check if LaTeX is Installed</a><br>
-              <a href="#23-install-latex-on-windows">2.3. Install LaTeX on Windows</a><br>
-              <a href="#24-install-latex-on-wsl-ubuntu-debian">2.4. Install LaTeX on WSL (Ubuntu/Debian)</a><br>
-              <a href="#25-do-you-need-latex-on-both-windows-and-wsl">2.5. Do You Need LaTeX on Both Windows and WSL?</a><br>
-              <a href="#26-best-latex-extension-for-vs-code">2.6. Best LaTeX Extension for VS Code</a><br>
+              <a href="#21-latex-environment-choices">2.1. LaTeX Environment Choices</a><br>
+              <a href="#22-recommended-docker-image">2.2. Recommended Docker Image</a><br>
+              <a href="#23-best-latex-extension-for-vs-code">2.3. Best LaTeX Extension for VS Code</a><br>
   </div>
 </details>
  
@@ -51,10 +48,25 @@ This repository provides comprehensive resources and practical guidance for crea
 
 <details>
   <summary><a href="#5-resume-font-guide"><i><b>5. Resume Font Guide</b></i></a></summary>
+  <div>
+              <a href="#51-why-inter--montserrat">5.1. Why Inter + Montserrat?</a><br>
+              <a href="#52-avoid-these-for-resumes">5.2. Avoid These for Resumes</a><br>
+              <a href="#53-modern-fonts-for-tech--startups">5.3. Modern Fonts for Tech & Startups</a><br>
+              <a href="#54-classic--safe-resume-fonts">5.4. Classic & Safe Resume Fonts</a><br>
+  </div>
 </details>
 
 <details>
   <summary><a href="#6-latex-environment-for-cursor-ai"><i><b>6. LaTeX Environment for Cursor AI</b></i></a></summary>
+  <div>
+              <a href="#61-features">6.1. Features</a><br>
+              <a href="#62-getting-started">6.2. Getting Started</a><br>
+              <a href="#63-writing-latex">6.3. Writing LaTeX</a><br>
+              <a href="#64-customizing-the-environment">6.4. Customizing the Environment</a><br>
+              <a href="#65-troubleshooting">6.5. Troubleshooting</a><br>
+              <a href="#66-learning-resources">6.6. Learning Resources</a><br>
+              <a href="#67-how-to-use-your-new-latex-environment-with-cursor-ai">6.7. How to Use Your New LaTeX Environment with Cursor AI</a><br>
+  </div>
 </details>
  
 # 1. About this Repository
@@ -148,13 +160,13 @@ Folder PATH listing
 │       README.md                                  <-- Project overview
 ```
 
-# 2. LaTeX on Windows, WSL, and VS Code
+# 2. LaTeX Environment Options
 
-## 2.1. LaTeX on Local vs. Overleaf
+## 2.1. LaTeX Environment Choices
 
-This subsection compares different LaTeX environments for resume creation, focusing on local installation methods versus cloud-based alternatives.
+Based on our experience, we recommend two primary approaches for working with LaTeX for your resume projects. Local installations of LaTeX on Windows and WSL can be problematic and time-consuming, so we recommend these more reliable options:
 
-### Local LaTeX with Docker
+### 2.1.1. Docker-Based LaTeX Environment
 
 - **Full Capabilities:** Docker-based LaTeX provides **complete functionality** equivalent to traditional installations
 - **Environment Control:** Offers **full control** over package installation and configuration
@@ -164,7 +176,9 @@ This subsection compares different LaTeX environments for resume creation, focus
 - **Isolation:** Keeps LaTeX environment **separate from host system**, preventing conflicts
 - **Portability:** Easy to replicate environment on different machines without lengthy setup
 
-### Overleaf Platform
+**Best For:** Users who need AI assistance with Cursor Copilot, need offline capabilities, or prefer working in their own development environment.
+
+### 2.1.2. Overleaf Platform
 
 - **Accessibility:** **Web-based interface** accessible from any device with internet connection
 - **Zero Setup:** Eliminates need for local installation or configuration
@@ -173,111 +187,86 @@ This subsection compares different LaTeX environments for resume creation, focus
 - **Templates:** Provides extensive library of pre-designed templates
 - **Limited Offline Use:** Requires internet connection for most functionality
 
-### Best Choice Based on Needs
+**Best For:** Users who prioritize ease of use, frequent collaboration, or need to access documents from multiple devices without setup.
 
-The optimal solution depends on specific requirements:
-- Choose **Docker-based LaTeX** if you value integration with tools like Cursor Copilot, need offline capabilities, or prefer working in your own development environment
-- Choose **Overleaf** if you prioritize ease of use, frequent collaboration, or need to access your documents from multiple devices without setup
+## 2.2. Recommended Docker Image
 
-Both approaches provide the complete LaTeX functionality needed for creating professional, ATS-friendly resumes.
+Our repository uses the **qdm12/latexdevcontainer** Docker image (`ghcr.io/qdm12/latexdevcontainer:latest-full`), specifically configured for Cursor Copilot integration. This image was chosen for several important reasons:
 
-## 2.2. Check if LaTeX is Installed
+### 2.2.1. Why We Chose This Image
 
-### 2.2.1. On Windows (PowerShell or CMD)
+- **Complete TeXLive Distribution:** Includes the full TeX Live 2023 distribution with all LaTeX packages
+- **Optimized for Dev Containers:** Built specifically for VS Code/Cursor dev container workflows
+- **Pre-configured LaTeX Workshop:** Comes with settings for the LaTeX Workshop extension
+- **Auto-Updates:** Updates all TeX packages on container startup
+- **Lightweight Base:** Built on Alpine Linux for faster startup times
+- **Regular Maintenance:** Actively maintained with frequent updates
 
-```bash
-pdflatex --version
-```
+### 2.2.2. How to Use the Docker Image
 
-### 2.2.2. On WSL (Ubuntu/Debian)
+1. **Prerequisites:**
+   - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+   - Install [Cursor](https://cursor.sh/) IDE
+   - Install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
 
-```bash
-pdflatex --version
-```
+2. **Getting Started:**
+   - Clone this repository
+   - Open it in Cursor
+   - When prompted, select "Reopen in Container" (or use the Command Palette: `Ctrl+Shift+P` or `Cmd+Shift+P` → `Remote-Containers: Reopen in Container`)
+   - The container will build automatically with all LaTeX packages installed
 
-If LaTeX is installed, you'll see version info. Otherwise, you'll get a "command not found" error.
+3. **Using the Environment:**
+   - Edit .tex files directly in Cursor
+   - Save to trigger automatic compilation (configured in LaTeX Workshop)
+   - View the PDF in the built-in tab viewer
+   - Use Cursor AI (`Ctrl+K` or `Cmd+K`) for LaTeX assistance
 
-## 2.3. Install LaTeX on Windows
+This approach removes all the headaches of local LaTeX installation while providing a full-featured environment that works perfectly with AI assistance.
 
-1. Download the installer:[https://www.tug.org/texlive/windows.html](https://www.tug.org/texlive/windows.html)
-2. Run `install-tl-windows.exe`.
-3. During installation:
+### 2.2.3. Technical Details
 
-   - Accept defaults or customize.
-   - Make sure it adds LaTeX to your system `PATH`.
-4. After install, restart PowerShell and check:
+Our container setup includes:
+- **LaTeX Workshop** extension for compilation and preview
+- **LaTeX Utilities** for enhanced LaTeX editing
+- **LTeX** for grammar checking in LaTeX documents
+- **Code Spell Checker** for spell checking
+- **Copilot** integration for AI assistance
 
-```bash
-pdflatex --version
-```
+The container is configured to:
+- Automatically build LaTeX documents on save
+- Clean auxiliary files after successful builds
+- Use SyncTeX for synchronized PDF viewing
+- Update all TeX packages on container startup
 
-> Recommended for full compatibility with LaTeX Workshop in Windows.
+You can see the full configuration in the `.devcontainer/devcontainer.json` file.
 
-## 2.4. Install LaTeX on WSL (Ubuntu/Debian)
+### 2.2.4. Image Size and Performance Considerations
 
-### 2.4.1. Option 1: Using apt (Simpler, but might be outdated)
+The Docker image (`ghcr.io/qdm12/latexdevcontainer:latest-full`) is large due to the comprehensive nature of the full TeX Live distribution:
 
-```bash
-sudo apt update
-sudo apt install texlive-full -y
-```
+- **Download size:** Approximately 4-5 GB
+- **Installed size:** Approximately 7-9 GB on disk
 
-> This installs an older version (e.g. TeX Live 2022), but works fine in most cases.
+This is normal for a complete LaTeX environment that includes thousands of packages, fonts, and documentation. Some key points to understand:
 
-### 2.4.2. Option 2: Install Latest TeX Live (Advanced, for latest features)
+- The image is only downloaded once and cached locally by Docker
+- Subsequent project openings reuse the cached image without re-downloading
+- The container is created when you open the project and removed when you close your editor
+- Docker only downloads updates when the base image changes
 
-```bash
-# Remove old version (optional)
-sudo apt remove texlive*
-sudo apt autoremove
+If you're concerned about disk space, smaller alternatives like `ghcr.io/qdm12/latexdevcontainer:latest-basic` (around 2-3 GB) are available, but they include fewer LaTeX packages and may not support all advanced resume templates.
 
-# Download and extract latest TeX Live installer
-wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-tar -xvzf install-tl-unx.tar.gz
-cd install-tl-*
-
-# Launch installer (interactive)
-sudo ./install-tl
-```
-
-Add TeX Live to your shell config (e.g. `.zshrc` or `.bashrc`):
-
-```bash
-export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
-```
-
-Reload shell and confirm:
-
-```bash
-source ~/.zshrc   # or source ~/.bashrc
-pdflatex --version
-```
-
-## 2.5. Do You Need LaTeX on Both Windows and WSL?
-
-| VS Code Environment    | LaTeX Required In |
-| ---------------------- | ----------------- |
-| Windows (native)       | Windows           |
-| WSL (Remote mode)      | WSL               |
-| Dev Container (Docker) | Inside container  |
-
-- If you're editing LaTeX files using **Windows VS Code**, you only need LaTeX on Windows.
-- If you're editing files using **WSL VS Code**, you need LaTeX installed in WSL.
-- If using **Docker**, LaTeX must be installed inside the Docker image.
-
-> Check VS Code's bottom-left corner to see whether you're in WSL, Windows, or a container.
-
-## 2.6. Best LaTeX Extension for VS Code
+## 2.3. Best LaTeX Extension for VS Code
 
 Use the **[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)** extension:
 
-### 2.6.1. Extension Info:
+### 2.3.1. Extension Info:
 
 - **Name:** LaTeX Workshop
 - **ID:** `James-Yu.latex-workshop`
 - **Marketplace:** [View on VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
-### 2.6.2. Features:
+### 2.3.2. Features:
 
 - Live PDF preview with sync (forward/inverse search)
 - Auto build on save
@@ -323,7 +312,7 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 
 # 5. Resume Font Guide
 
-### Why Inter + Montserrat?
+## 5.1. Why Inter + Montserrat?
 - **Modern look** ideal for startups and tech companies
 - **Highly readable** on screen and in print
 - **ATS-compliant** (friendly for resume scanners)
@@ -333,14 +322,14 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 
 ---
 
-### Avoid These for Resumes
+## 5.2. Avoid These for Resumes
 - **Times New Roman** – Overused and outdated
 - **Comic Sans / Papyrus** – Not professional
 - **Fancy display fonts** – Bad for ATS, hard to read
 
 ---
 
-### Modern Fonts for Tech & Startups
+## 5.3. Modern Fonts for Tech & Startups
 Perfect for innovation-driven, digital-first environments.
 
 | Font              | Style       | Why It's Great                                  |
@@ -359,7 +348,7 @@ Perfect for innovation-driven, digital-first environments.
 
 ---
 
-### Classic & Safe Resume Fonts
+## 5.4. Classic & Safe Resume Fonts
 Great for general, traditional, or academic roles.
 
 | Font         | Style       | Why Use It                          |
@@ -379,7 +368,7 @@ Great for general, traditional, or academic roles.
 
 This project provides a full-featured LaTeX environment that works seamlessly with Cursor AI's assistance features. It uses Docker containers to provide a consistent development experience with all necessary LaTeX packages pre-installed.
 
-## Features
+## 6.1. Features
 
 - **Full TeXLive Installation**: Complete LaTeX environment similar to Overleaf
 - **Cursor AI Integration**: Works with Cursor's AI assistant for code completion and generation
@@ -388,25 +377,25 @@ This project provides a full-featured LaTeX environment that works seamlessly wi
 - **Syntax Highlighting and Formatting**: Advanced LaTeX editing features
 - **Spell and Grammar Checking**: Integrated spelling and grammar tools
 
-## Getting Started
+## 6.2. Getting Started
 
-### Prerequisites
+### 6.2.1. Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
 - [Cursor](https://cursor.sh/) IDE installed
 - [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed in Cursor
 
-### Opening the Project
+### 6.2.2. Opening the Project
 
 1. Clone this repository to your local machine
 2. Open the folder in Cursor IDE
 3. When prompted, click "Reopen in Container" or use the command palette:
    - Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
-   - Type "Remote-Containers: Reopen in Container" and select it
+   - Type `Remote-Containers: Reopen in Container` and select it
 
 The first time you open the container, it may take several minutes to download and set up the environment.
 
-### Writing LaTeX
+## 6.3. Writing LaTeX
 
 1. Open or create `.tex` files in the editor
 2. Save the file to automatically compile it
@@ -415,46 +404,46 @@ The first time you open the container, it may take several minutes to download a
    - `Ctrl+K` or `Cmd+K` for inline AI completions
    - `Ctrl+L` or `Cmd+L` for AI chat with context about your LaTeX code
 
-## Customizing the Environment
+## 6.4. Customizing the Environment
 
 - Add additional LaTeX packages in `.devcontainer/devcontainer.json` under `postCreateCommand`
 - Modify LaTeX Workshop settings in `.devcontainer/devcontainer.json`
 - Change compilation parameters in the LaTeX Workshop configuration
 
-## Troubleshooting
+## 6.5. Troubleshooting
 
 - **Container won't start**: Make sure Docker is running
 - **Compilation errors**: Check the LaTeX Workshop output panel for details
 - **Missing packages**: Add them using `tlmgr install package-name` in terminal or in postCreateCommand
 
-## Learning Resources
+## 6.6. Learning Resources
 
 - [LaTeX Documentation](https://www.latex-project.org/help/documentation/)
 - [Overleaf LaTeX Learning Resources](https://www.overleaf.com/learn)
 - [LaTeX Workshop Documentation](https://github.com/James-Yu/LaTeX-Workshop/wiki)
 
-## How to Use Your New LaTeX Environment with Cursor AI
+## 6.7. How to Use Your New LaTeX Environment with Cursor AI
 
 I've created a complete LaTeX development environment integrated with Cursor's AI features. Here's how to use it:
 
-### Getting Started
+### 6.7.1. Getting Started
 
 1. Make sure you have **Docker Desktop** installed and running on your system
 2. Install the **Remote - Containers** extension in Cursor
 3. Open the project folder in Cursor
-4. When prompted, select "Reopen in Container" (or use Cmd/Ctrl+Shift+P and search for "Reopen in Container")
+4. When prompted, select "Reopen in Container" (or use `Cmd+Shift+P` or `Ctrl+Shift+P` and search for `Remote-Containers: Reopen in Container`)
 
 This will start building and running the Docker container with a full TeXLive installation. It may take several minutes the first time, as it needs to download the Docker image.
 
-### Features of This Setup
+### 6.7.2. Features of This Setup
 
 - **Complete LaTeX Environment**: The full TeXLive distribution with all packages
 - **Auto-Compilation**: Documents compile when you save
 - **Built-in PDF Viewer**: View PDFs directly in Cursor
 - **LaTeX-Specific Tools**: Formatting, spell checking, and syntax validation
-- **Cursor AI Integration**: Use Cmd/Ctrl+K for AI assistance with your LaTeX code
+- **Cursor AI Integration**: Use `Cmd+K` or `Ctrl+K` for AI assistance with your LaTeX code
 
-### Working with LaTeX and AI
+### 6.7.3. Working with LaTeX and AI
 
 The real power comes from combining LaTeX with Cursor's AI features:
 
@@ -465,7 +454,7 @@ The real power comes from combining LaTeX with Cursor's AI features:
    - Get help with document structure: "Help me create a bibliography section"
    - Debug errors: "Why is my equation not compiling?"
 
-### Benefits Over Overleaf
+### 6.7.4. Benefits Over Overleaf
 
 This setup gives you several advantages over Overleaf:
 
