@@ -1,5 +1,13 @@
 <h1 align="center">ATS-Friendly Resume Formatting Best Practices</h1>
 
+## 🧰 How to Use This Template    
+
+Click the green **"Use this template"** button at the top of the page, then choose **"Create a new repository"**.   
+
+This will create your own copy of this project, which you can modify freely — no need to fork!   
+
+---
+
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions.
 
 <div style="font-size:1.5em; font-weight:bold; margin-top:20px;">Table of Contents</div>
@@ -7,13 +15,13 @@ This repository provides comprehensive resources and practical guidance for crea
 <details>
   <summary><a href="#1-about-this-repository"><i><b>1. About this Repository</b></i></a></summary>
   <div>
-              <a href="#11-who-is-this-tutorial-for">1.1. Who Is This Tutorial For?</a><br>
-              <a href="#12-what-will-you-learn">1.2. What Will You Learn?</a><br>
-              <a href="#13-prerequisites">1.3. Prerequisites</a><br>
-              <a href="#14-repository-structure">1.4. Repository Structure</a><br>
+              <a href="#11-who-is-this-tutorial-for">1.1. Who Is This Tutorial For?</a><br>
+              <a href="#12-what-will-you-learn">1.2. What Will You Learn?</a><br>
+              <a href="#13-prerequisites">1.3. Prerequisites</a><br>
+              <a href="#14-repository-structure">1.4. Repository Structure</a><br>
   </div>
 </details>
- 
+ 
 
 <details>
   <summary><a href="#2-latex-on-windows-wsl-and-vs-code"><i><b>2. LaTeX on Windows, WSL, and VS Code</b></i></a></summary>
@@ -26,23 +34,29 @@ This repository provides comprehensive resources and practical guidance for crea
               <a href="#26-best-latex-extension-for-vs-code">2.6. Best LaTeX Extension for VS Code</a><br>
   </div>
 </details>
- 
+ 
 
 <details>
   <summary><a href="#3-applicant-tracking-systems-ats"><i><b>3. Applicant Tracking Systems (ATS)</b></i></a></summary>
   <div>
-              <a href="#31-what-is-an-ats">3.1. What is an ATS?</a><br>
-              <a href="#32-how-ats-systems-process-resumes">3.2. How ATS Systems Process Resumes</a><br>
-              <a href="#33-key-strategies-for-ats-optimization">3.3. Key Strategies for ATS Optimization</a><br>
+              <a href="#31-what-is-an-ats">3.1. What is an ATS?</a><br>
+              <a href="#32-how-ats-systems-process-resumes">3.2. How ATS Systems Process Resumes</a><br>
+              <a href="#33-key-strategies-for-ats-optimization">3.3. Key Strategies for ATS Optimization</a><br>
   </div>
 </details>
- 
 
-<div>
-      <a href="#4-best-examples"><i><b>4. Best Examples</b></i></a>
-</div>
- 
+<details>
+  <summary><a href="#4-best-examples"><i><b>4. Best Examples</b></i></a></summary>
+</details>
 
+<details>
+  <summary><a href="#5-resume-font-guide"><i><b>5. Resume Font Guide</b></i></a></summary>
+</details>
+
+<details>
+  <summary><a href="#6-latex-environment-for-cursor-ai"><i><b>6. LaTeX Environment for Cursor AI</b></i></a></summary>
+</details>
+ 
 # 1. About this Repository
 
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions. It combines LaTeX technical knowledge with strategic content optimization to help you craft resumes that stand out to both automated screening systems and human reviewers.
@@ -307,7 +321,61 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 - [rover-resume](https://github.com/subidit/rover-resume)
 - [GitHub Search: Popular LaTeX Resumes](https://github.com/search?q=stars%3A%3E10+forks%3A%3E10+language%3ATeX+resume&type=repositories&ref=advsearch&s=stars&o=desc)
 
-# LaTeX Environment for Cursor AI
+# 5. Resume Font Guide
+
+### Why Inter + Montserrat?
+- **Modern look** ideal for startups and tech companies
+- **Highly readable** on screen and in print
+- **ATS-compliant** (friendly for resume scanners)
+- **Free and open-source** via Google Fonts:
+  - [Inter](https://fonts.google.com/specimen/Inter)
+  - [Montserrat](https://fonts.google.com/specimen/Montserrat)
+
+---
+
+### Avoid These for Resumes
+- **Times New Roman** – Overused and outdated
+- **Comic Sans / Papyrus** – Not professional
+- **Fancy display fonts** – Bad for ATS, hard to read
+
+---
+
+### Modern Fonts for Tech & Startups
+Perfect for innovation-driven, digital-first environments.
+
+| Font              | Style       | Why It's Great                                  |
+|-------------------|-------------|-------------------------------------------------|
+| **Roboto**        | Sans-serif  | Clean, modern, used in Android & Google tools   |
+| **Lato**          | Sans-serif  | Friendly, sleek, and balanced                   |
+| **Inter**         | Sans-serif  | Optimized for digital UI, open and readable     |
+| **Montserrat**    | Sans-serif  | Bold, geometric, stylish for headers            |
+| **Source Sans Pro**| Sans-serif | Adobe-designed, clean and modern                |
+
+**Tips:**
+- Use **Inter** or **Roboto** for body, **Montserrat** or **Lato** for headers  
+- Line spacing: **1.25–1.5**  
+- Margins: **0.5–0.75 inch**  
+- Keep layout clean and ATS-friendly
+
+---
+
+### Classic & Safe Resume Fonts
+Great for general, traditional, or academic roles.
+
+| Font         | Style       | Why Use It                          |
+|--------------|-------------|-------------------------------------|
+| **Calibri**  | Sans-serif  | Microsoft default, modern, ATS-safe |
+| **Helvetica**| Sans-serif  | Clean, professional, widely respected |
+| **Georgia**  | Serif       | Screen-friendly, elegant classic    |
+| **Cambria**  | Serif       | Print-optimized, balanced            |
+| **Garamond** | Serif       | Elegant and traditional (great for CVs) |
+
+**Tips:**
+- Font size: **10–12 pt** body, **12–14 pt** headers  
+- Stick to one font for consistency  
+- Avoid outdated or playful fonts like Comic Sans or Times New Roman
+
+# 6. LaTeX Environment for Cursor AI
 
 This project provides a full-featured LaTeX environment that works seamlessly with Cursor AI's assistance features. It uses Docker containers to provide a consistent development experience with all necessary LaTeX packages pre-installed.
 
