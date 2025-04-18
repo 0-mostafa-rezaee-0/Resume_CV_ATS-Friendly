@@ -356,3 +356,33 @@ ChatPDF
 Vision
 Full Page
 Invite & Earn
+
+# LaTeX temporary files
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.fls
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Build directory
+/build/
+
+# PDF files (optional, uncomment if you don't want to track PDFs)
+# *.pdf
+
+# Editor files
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OS files
+.DS_Store
+Thumbs.db

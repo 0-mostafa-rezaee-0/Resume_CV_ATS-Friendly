@@ -1,0 +1,15 @@
+version: '3'
+services:
+  latex:
+    image: ghcr.io/qdm12/latexdevcontainer:latest-full
+    volumes:
+      - ..:/workspaces:cached
+      - latex-extensions:/root/.vscode-server/extensions
+      - latex-insiders-extensions:/root/.vscode-server-insiders/extensions
+    command: sleep infinity
+    environment:
+      - TZ=UTC
+    
+volumes:
+  latex-extensions:
+  latex-insiders-extensions: 

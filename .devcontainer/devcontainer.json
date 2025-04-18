@@ -1,0 +1,56 @@
+{
+  "name": "LaTeX Environment",
+  "image": "ghcr.io/qdm12/latexdevcontainer:latest-full",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "ms-vscode.cpptools",
+        "tecosaur.latex-utilities",
+        "valentjn.vscode-ltex",
+        "streetsidesoftware.code-spell-checker",
+        "github.copilot",
+        "github.copilot-chat"
+      ],
+      "settings": {
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk",
+            "tools": ["latexmk"]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-pdf",
+              "%DOC%"
+            ]
+          }
+        ],
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.latex.clean.fileTypes": [
+          "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", 
+          "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk", "*.synctex.gz", "*.run.xml"
+        ],
+        "editor.formatOnSave": true,
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.intellisense.package.enabled": true,
+        "latex-workshop.latex.rootFile.useSubFile": true,
+        "latex-workshop.latex.outDir": "%DIR%/build",
+        "latex-workshop.synctex.afterBuild.enabled": true,
+        "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click"
+      }
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "tlmgr update --self --all && mkdir -p build",
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
+  }
+} 
