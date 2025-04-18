@@ -1,7 +1,7 @@
 version: '3'
 services:
   latex:
-    image: ghcr.io/qdm12/latexdevcontainer:latest-full
+    image: sharelatex/sharelatex
     volumes:
       - ..:/workspaces:cached
       - latex-extensions:/root/.vscode-server/extensions
@@ -9,6 +9,7 @@ services:
     command: sleep infinity
     environment:
       - TZ=UTC
+      - DOCKER_HOST=unix:///var/run/docker.sock
     
 volumes:
   latex-extensions:

@@ -1,6 +1,6 @@
 {
-  "name": "LaTeX Environment",
-  "image": "ghcr.io/qdm12/latexdevcontainer:latest-full",
+  "name": "LaTeX Environment (Overleaf-like)",
+  "image": "sharelatex/sharelatex",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -48,8 +48,8 @@
       }
     }
   },
-  "remoteUser": "vscode",
-  "postCreateCommand": "tlmgr update --self --all && mkdir -p build",
+  "remoteUser": "root",
+  "postCreateCommand": "mkdir -p build",
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
   }
