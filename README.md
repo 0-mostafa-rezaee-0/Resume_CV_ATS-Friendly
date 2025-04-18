@@ -29,6 +29,7 @@ This repository provides comprehensive resources and practical guidance for crea
               <a href="#21-latex-environment-choices">2.1. LaTeX Environment Choices</a><br>
               <a href="#22-recommended-docker-image">2.2. Recommended Docker Image</a><br>
               <a href="#23-best-latex-extension-for-vs-code">2.3. Best LaTeX Extension for VS Code</a><br>
+              <a href="#24-using-sharelatex-docker-container">2.4. Using ShareLaTeX Docker Container</a><br>
   </div>
 </details>
  
@@ -273,6 +274,51 @@ Use the **[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=J
 - Syntax highlighting and snippet support
 - IntelliSense for citations, labels, and refs
 - Works with both Windows and WSL backends
+
+## 2.4. Using the ShareLaTeX Docker Container
+
+For those using the ShareLaTeX/Overleaf Docker container (`sharelatex/sharelatex`), follow these steps for proper usage:
+
+### Starting the Container
+```bash
+docker run -d -p 80:80 sharelatex/sharelatex
+```
+
+### Workflow for Using ShareLaTeX
+1. Start the container when you want to work on LaTeX documents
+2. Access the ShareLaTeX interface at http://localhost or http://localhost:80
+3. When finished, stop the container to conserve system resources
+
+### Stopping and Restarting
+To stop the container when you're done:
+```bash
+docker stop [CONTAINER_ID or CONTAINER_NAME]
+```
+
+Example:
+```bash
+docker stop distracted_khorana
+```
+
+To start the same container again later:
+```bash
+docker start [CONTAINER_ID or CONTAINER_NAME]
+```
+
+Example:
+```bash
+docker start distracted_khorana
+```
+
+### Workflow with Cursor
+The recommended workflow when using with Cursor:
+1. Stop the container when you're done: `docker stop [CONTAINER_NAME]`
+2. Later, when you want to work again:
+   - Start the container: `docker start [CONTAINER_NAME]`
+   - Open Cursor
+   - Reopen your project in the dev container through Cursor
+
+This ensures all your work is preserved between sessions without needing to recreate containers.
 
 # 3. Applicant Tracking Systems (ATS)
 
