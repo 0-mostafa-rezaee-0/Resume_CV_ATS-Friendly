@@ -1,0 +1,151 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{enumitem, hyperref, graphicx, xcolor, multicol, titlesec, parskip}
+\usepackage{fancyhdr}
+\usepackage{array}
+
+% Modern sans-serif fonts
+\usepackage{avant}     % For headings (similar to Montserrat)
+\usepackage{helvet}    % For body text (similar to Inter)
+\renewcommand{\familydefault}{\sfdefault}
+
+% Section title formatting
+\titleformat{\section}
+    {\bfseries\Large}
+    {}
+    {0em}
+    {}
+    [\vspace{-0.5em}]
+
+% Reduce spacing for sections
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.25}
+
+% Hyperlink styling
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+}
+
+%---------------------------------------------------------------------
+\begin{document}
+
+%=========================================
+% Header with two-column format
+\noindent
+
+\begin{tabular}{@{}p{3.5in} p{3.5in}@{}}
+
+    {\bfseries\LARGE Jane Smith} & \hfill LinkedIn: \href{https://www.linkedin.com/in/jane-smith/}{linkedin.com/in/jane-smith} \\
+    
+    \hline 
+    
+    Software Engineer | Full Stack Developer & \hfill jane.smith@example.com | (123) 456-7890
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Professional Summary}
+
+\begin{itemize}
+    \item Results-oriented Software Engineer with 5+ years of experience specializing in full-stack development, cloud architecture, and DevOps. Proven track record of delivering high-performance web applications resulting in 40\% improvement in user engagement.
+    
+    \item Successfully led the migration of legacy systems to modern microservices architecture that reduced deployment time by 75\%, leading to faster time-to-market for new features.
+    
+    \item Recognized for problem-solving abilities and expertise in optimizing application performance, consistently delivering 99.9\% uptime across enterprise-scale applications.
+    
+    \item Adept at mentoring junior developers and implementing CI/CD practices, enabling 3x faster development cycles and improved code quality.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Professional Experience}
+
+\vspace{4pt}
+%*****************************************
+{\bfseries Senior Software Engineer}, Tech Innovations Inc., San Francisco, CA \hfill January 2022 -- Present
+
+\begin{itemize}
+    \item Led cross-functional team of 8 developers to redesign the company's flagship product, resulting in 35\% increase in monthly active users and 28\% reduction in bounce rate.
+    
+    \item Implemented containerization strategy using Docker and Kubernetes to scale applications dynamically, improving system reliability by 45\% and reducing cloud infrastructure costs by $120K annually.
+    
+    \item Collaborated with product and design teams to develop and launch 5 new features, enhancing customer satisfaction scores from 7.2 to 8.9 on a 10-point scale.
+    
+    \item Managed the implementation of comprehensive test automation framework, increasing code coverage from 65\% to 92\% while reducing regression testing time by 70\%.
+\end{itemize}
+
+\vspace{4pt}
+%*****************************************
+{\bfseries Software Engineer}, DataFlow Systems, Boston, MA \hfill March 2019 -- December 2021
+
+\begin{itemize}
+    \item Spearheaded migration from monolithic architecture to microservices, resulting in 60\% improved application performance and 40\% reduction in deployment failures.
+    
+    \item Developed and implemented real-time data processing pipeline handling 500+ transactions per second, reducing data lag from minutes to milliseconds.
+    
+    \item Recognized for excellence in code quality, receiving the quarterly "Code Craftsperson" award twice in 2021.
+    
+    \item Trained and mentored 6 junior developers on best practices in software development, improving team velocity by 32\% over three quarters.
+\end{itemize}
+
+\vspace{4pt}
+%*****************************************
+{\bfseries Junior Developer}, StartUp Ventures, New York, NY \hfill June 2017 -- February 2019
+
+\begin{itemize}
+    \item Successfully delivered front-end components for the company's SaaS platform, exceeding sprint targets by 20\% consistently.
+    
+    \item Identified and resolved critical security vulnerabilities, leading to successful SOC 2 certification and securing three enterprise clients worth $1.2M in annual revenue.
+    
+    \item Streamlined build process, reducing average build time from 15 minutes to 4 minutes while maintaining comprehensive test coverage.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education}
+
+\begin{itemize}
+    \item {\bfseries Master of Science in Computer Science}, Massachusetts Institute of Technology, Cambridge, MA \hfill 2017
+    
+    \item {\bfseries Bachelor of Science in Software Engineering}, University of California, Berkeley, CA \hfill 2015
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Technical Skills}
+
+\begin{itemize}
+    \item {\bfseries Programming Languages}: JavaScript (ES6+), TypeScript, Python, Java, Go, SQL
+    
+    \item {\bfseries Front-End Technologies}: React, Angular, Vue.js, Redux, HTML5, CSS3, SASS, Webpack
+    
+    \item {\bfseries Back-End \& Infrastructure}: Node.js, Express, Django, Spring Boot, Docker, Kubernetes, AWS, Azure, GCP
+    
+    \item {\bfseries Database \& Data}: PostgreSQL, MongoDB, Redis, Elasticsearch, GraphQL, REST APIs, Kafka
+    
+    \item {\bfseries DevOps \& Tools}: Git, GitHub Actions, Jenkins, CircleCI, Terraform, Prometheus, Grafana, ELK Stack
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Certifications}
+
+\begin{itemize}
+    \item {\bfseries AWS Certified Solutions Architect - Professional}, Amazon Web Services \hfill 2022
+    
+    \item {\bfseries Google Cloud Professional Cloud Architect}, Google Cloud \hfill 2021
+    
+    \item {\bfseries Certified Kubernetes Administrator (CKA)}, Cloud Native Computing Foundation \hfill 2020
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Projects}
+
+\begin{itemize}
+    \item {\bfseries Scalable E-commerce Platform}: Developed microservices-based e-commerce solution handling 10,000+ concurrent users with 99.99\% uptime, using React, Node.js, MongoDB, and AWS
+    
+    \item {\bfseries Open-Source Contribution - Data Visualization Library}: Core contributor to data visualization library with 15K+ GitHub stars; implemented 3 major features enhancing performance by 35\%
+\end{itemize}
+
+\end{document}
+%--------------------------------------------------------------------- 
