@@ -10,59 +10,62 @@ This will create your own copy of this project, which you can modify freely — 
 
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions.
 
-<div style="font-size:1.5em; font-weight:bold; margin-top:20px;">Table of Contents</div>
+***Table of Contents***
 
 <details>
   <summary><a href="#1-about-this-repository"><i><b>1. About this Repository</b></i></a></summary>
   <div>
-              <a href="#11-who-is-this-tutorial-for">1.1 Who Is This Tutorial For?</a><br>
-              <a href="#12-what-will-you-learn">1.2 What Will You Learn?</a><br>
-              <a href="#13-prerequisites">1.3 Prerequisites</a><br>
-              <a href="#14-repository-structure">1.4 Repository Structure</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#11-who-is-this-tutorial-for">1.1. Who Is This Tutorial For?</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#12-what-will-you-learn">1.2. What Will You Learn?</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#13-prerequisites">1.3. Prerequisites</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#14-repository-structure">1.4. Repository Structure</a><br>
   </div>
 </details>
- 
+&nbsp;
 
 <details>
   <summary><a href="#2-latex-environment-options"><i><b>2. LaTeX Environment Options</b></i></a></summary>
   <div>
-              <a href="#21-latex-environment-choices">2.1 LaTeX Environment Choices</a><br>
-              <a href="#22-recommended-docker-image">2.2 Recommended Docker Image</a><br>
-              <a href="#23-best-latex-extension-for-vs-code">2.3 Best LaTeX Extension for VS Code</a><br>
-              <a href="#24-alternative-latex-environments">2.4 Alternative LaTeX Environments</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#21-latex-environment-choices">2.1. LaTeX Environment Choices</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#22-recommended-docker-image">2.2. Recommended Docker Image</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#23-best-latex-extension-for-vs-code">2.3. Best LaTeX Extension for VS Code</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#24-alternative-latex-environments">2.4. Alternative LaTeX Environments</a><br>
   </div>
 </details>
- 
+&nbsp;
 
 <details>
   <summary><a href="#3-applicant-tracking-systems-ats"><i><b>3. Applicant Tracking Systems (ATS)</b></i></a></summary>
   <div>
-              <a href="#31-what-is-an-ats">3.1 What is an ATS?</a><br>
-              <a href="#32-how-ats-systems-process-resumes">3.2 How ATS Systems Process Resumes</a><br>
-              <a href="#33-key-strategies-for-ats-optimization">3.3 Key Strategies for ATS Optimization</a><br>
-              <a href="#34-formatting-rules-for-ats-compatibility">3.4 Formatting Rules for ATS Compatibility</a><br>
-              <a href="#35-common-mistakes-that-trigger-rejection">3.5 Common Mistakes That Trigger Rejection</a><br>
-              <a href="#36-section--field-best-practices">3.6 Section & Field Best Practices</a><br>
-              <a href="#37-testing--optimization-tools">3.7 Testing & Optimization Tools</a><br>
-              <a href="#38-advanced-optimization-tips">3.8 Advanced Optimization Tips</a><br>
-              <a href="#39-quick-self-check-before-submitting">3.9 Quick Self-Check Before Submitting</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#31-what-is-an-ats">3.1. What is an ATS?</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#32-how-ats-systems-process-resumes">3.2. How ATS Systems Process Resumes</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#33-key-strategies-for-ats-optimization">3.3. Key Strategies for ATS Optimization</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#34-formatting-rules-for-ats-compatibility">3.4. Formatting Rules for ATS Compatibility</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#35-common-mistakes-that-trigger-rejection">3.5. Common Mistakes That Trigger Rejection</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#36-section--field-best-practices">3.6. Section & Field Best Practices</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#37-testing--optimization-tools">3.7. Testing & Optimization Tools</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#38-advanced-optimization-tips">3.8. Advanced Optimization Tips</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#39-quick-self-check-before-submitting">3.9. Quick Self-Check Before Submitting</a><br>
   </div>
 </details>
+&nbsp;
 
-<details>
-  <summary><a href="#4-best-examples"><i><b>4. Best Examples</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4-best-examples"><i><b>4. Best Examples</b></i></a>
+</div>
+&nbsp;
 
 <details>
   <summary><a href="#5-resume-font-guide"><i><b>5. Resume Font Guide</b></i></a></summary>
   <div>
-              <a href="#51-why-inter--montserrat">5.1 Why Inter + Montserrat?</a><br>
-              <a href="#52-fonts-to-avoid-and-why">5.2 Fonts to Avoid (and Why)</a><br>
-              <a href="#53-modern-fonts-for-tech--startups">5.3 Modern Fonts for Tech & Startups</a><br>
-              <a href="#54-classic--safe-fonts-traditional-roles">5.4 Classic & Safe Fonts (Traditional Roles)</a><br>
-              <a href="#55-definitive-resume-typography--layout-rules-2025">5.5 Definitive Resume Typography & Layout Rules (2025)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#51-why-inter--montserrat">5.1. Why Inter + Montserrat?</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#52-fonts-to-avoid-and-why">5.2. Fonts to Avoid (and Why)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#53-modern-fonts-for-tech--startups">5.3. Modern Fonts for Tech & Startups</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#54-classic--safe-fonts-traditional-roles">5.4. Classic & Safe Fonts (Traditional Roles)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#55-definitive-resume-typography--layout-rules-2025">5.5. Definitive Resume Typography & Layout Rules (2025)</a><br>
   </div>
 </details>
+&nbsp;
 
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions. It combines LaTeX technical knowledge with strategic content optimization to help you craft resumes that stand out to both automated screening systems and human reviewers.
 
