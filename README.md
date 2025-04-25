@@ -67,6 +67,11 @@ This repository provides comprehensive resources and practical guidance for crea
 </details>
 &nbsp;
 
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#6-contact-information"><i><b>6. Contact Information</b></i></a>
+</div>
+&nbsp;
+
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions. It combines LaTeX technical knowledge with strategic content optimization to help you craft resumes that stand out to both automated screening systems and human reviewers.
 
 ## 1.1. Who Is This Tutorial For?
@@ -545,3 +550,8 @@ Follow every point exactly—no substitutes, no alternatives.
    4. Re-save; do **not** alter styling after embedding fonts.
 
 Apply these eight rules verbatim and your résumé will render identically on any recruiter's screen, remain perfectly parsable by every major Applicant Tracking System, and present a crisp, modern aesthetic suited to tech or start-up roles.
+
+
+# 6. Contact Information
+
+For questions not addressed in the resources above, please connect with [Mostafa Rezaee](https://www.linkedin.com/in/mostafa-rezaee/) on LinkedIn for personalized assistance.    
