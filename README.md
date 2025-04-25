@@ -15,10 +15,10 @@ This repository provides comprehensive resources and practical guidance for crea
 <details>
   <summary><a href="#1-about-this-repository"><i><b>1. About this Repository</b></i></a></summary>
   <div>
-              <a href="#11-who-is-this-tutorial-for">1.1. Who Is This Tutorial For?</a><br>
-              <a href="#12-what-will-you-learn">1.2. What Will You Learn?</a><br>
-              <a href="#13-prerequisites">1.3. Prerequisites</a><br>
-              <a href="#14-repository-structure">1.4. Repository Structure</a><br>
+              <a href="#11-who-is-this-tutorial-for">1.1 Who Is This Tutorial For?</a><br>
+              <a href="#12-what-will-you-learn">1.2 What Will You Learn?</a><br>
+              <a href="#13-prerequisites">1.3 Prerequisites</a><br>
+              <a href="#14-repository-structure">1.4 Repository Structure</a><br>
   </div>
 </details>
  
@@ -26,10 +26,10 @@ This repository provides comprehensive resources and practical guidance for crea
 <details>
   <summary><a href="#2-latex-environment-options"><i><b>2. LaTeX Environment Options</b></i></a></summary>
   <div>
-              <a href="#21-latex-environment-choices">2.1. LaTeX Environment Choices</a><br>
-              <a href="#22-recommended-docker-image">2.2. Recommended Docker Image</a><br>
-              <a href="#23-best-latex-extension-for-vs-code">2.3. Best LaTeX Extension for VS Code</a><br>
-              <a href="#24-alternative-latex-environments">2.4. Alternative LaTeX Environments</a><br>
+              <a href="#21-latex-environment-choices">2.1 LaTeX Environment Choices</a><br>
+              <a href="#22-recommended-docker-image">2.2 Recommended Docker Image</a><br>
+              <a href="#23-best-latex-extension-for-vs-code">2.3 Best LaTeX Extension for VS Code</a><br>
+              <a href="#24-alternative-latex-environments">2.4 Alternative LaTeX Environments</a><br>
   </div>
 </details>
  
@@ -37,9 +37,15 @@ This repository provides comprehensive resources and practical guidance for crea
 <details>
   <summary><a href="#3-applicant-tracking-systems-ats"><i><b>3. Applicant Tracking Systems (ATS)</b></i></a></summary>
   <div>
-              <a href="#31-what-is-an-ats">3.1. What is an ATS?</a><br>
-              <a href="#32-how-ats-systems-process-resumes">3.2. How ATS Systems Process Resumes</a><br>
-              <a href="#33-key-strategies-for-ats-optimization">3.3. Key Strategies for ATS Optimization</a><br>
+              <a href="#31-what-is-an-ats">3.1 What is an ATS?</a><br>
+              <a href="#32-how-ats-systems-process-resumes">3.2 How ATS Systems Process Resumes</a><br>
+              <a href="#33-key-strategies-for-ats-optimization">3.3 Key Strategies for ATS Optimization</a><br>
+              <a href="#34-formatting-rules-for-ats-compatibility">3.4 Formatting Rules for ATS Compatibility</a><br>
+              <a href="#35-common-mistakes-that-trigger-rejection">3.5 Common Mistakes That Trigger Rejection</a><br>
+              <a href="#36-section--field-best-practices">3.6 Section & Field Best Practices</a><br>
+              <a href="#37-testing--optimization-tools">3.7 Testing & Optimization Tools</a><br>
+              <a href="#38-advanced-optimization-tips">3.8 Advanced Optimization Tips</a><br>
+              <a href="#39-quick-self-check-before-submitting">3.9 Quick Self-Check Before Submitting</a><br>
   </div>
 </details>
 
@@ -50,27 +56,13 @@ This repository provides comprehensive resources and practical guidance for crea
 <details>
   <summary><a href="#5-resume-font-guide"><i><b>5. Resume Font Guide</b></i></a></summary>
   <div>
-              <a href="#51-why-inter--montserrat">5.1. Why Inter + Montserrat?</a><br>
-              <a href="#52-avoid-these-for-resumes">5.2. Avoid These for Resumes</a><br>
-              <a href="#53-modern-fonts-for-tech--startups">5.3. Modern Fonts for Tech & Startups</a><br>
-              <a href="#54-classic--safe-resume-fonts">5.4. Classic & Safe Resume Fonts</a><br>
+              <a href="#51-why-inter--montserrat">5.1 Why Inter + Montserrat?</a><br>
+              <a href="#52-fonts-to-avoid-and-why">5.2 Fonts to Avoid (and Why)</a><br>
+              <a href="#53-modern-fonts-for-tech--startups">5.3 Modern Fonts for Tech & Startups</a><br>
+              <a href="#54-classic--safe-fonts-traditional-roles">5.4 Classic & Safe Fonts (Traditional Roles)</a><br>
+              <a href="#55-definitive-resume-typography--layout-rules-2025">5.5 Definitive Resume Typography & Layout Rules (2025)</a><br>
   </div>
 </details>
-
-<details>
-  <summary><a href="#6-latex-environment-for-cursor-ai"><i><b>6. LaTeX Environment for Cursor AI</b></i></a></summary>
-  <div>
-              <a href="#61-features">6.1. Features</a><br>
-              <a href="#62-getting-started">6.2. Getting Started</a><br>
-              <a href="#63-writing-latex">6.3. Writing LaTeX</a><br>
-              <a href="#64-customizing-the-environment">6.4. Customizing the Environment</a><br>
-              <a href="#65-troubleshooting">6.5. Troubleshooting</a><br>
-              <a href="#66-learning-resources">6.6. Learning Resources</a><br>
-              <a href="#67-how-to-use-your-new-latex-environment-with-cursor-ai">6.7. How to Use Your New LaTeX Environment with Cursor AI</a><br>
-  </div>
-</details>
- 
-# 1. About this Repository
 
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions. It combines LaTeX technical knowledge with strategic content optimization to help you craft resumes that stand out to both automated screening systems and human reviewers.
 
@@ -386,10 +378,10 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 ## 3.5. Common Mistakes That Trigger Rejection  
 
 1. **Graphic résumé templates** (infographics, headshots, charts)  
-2. **Keyword stuffing**—repeating “Python” 20 × with no context lowers match score  
+2. **Keyword stuffing**—repeating "Python" 20 × with no context lowers match score  
 3. **Important data in images** (e.g., certification logos)  
-4. **Acronyms without the long form**: write “Natural Language Processing (NLP)” the first time  
-5. **Uncommon section titles**: use “Professional Experience,” not “My Journey”  
+4. **Acronyms without the long form**: write "Natural Language Processing (NLP)" the first time  
+5. **Uncommon section titles**: use "Professional Experience," not "My Journey"  
 
 ---
 
@@ -398,30 +390,31 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 | Section | Tips for ATS |
 |---------|--------------|
 | **Contact** | Put phone, email, LinkedIn on one line; skip graphics |
-| **Professional Summary** | 2–3 lines rich in role-specific keywords (“Dockerized ML APIs” vs “hard-working professional”) |
+| **Professional Summary** | 2–3 lines rich in role-specific keywords ("Dockerized ML APIs" vs "hard-working professional") |
 | **Skills** | Separate **Hard Skills** (Python, Kubernetes) and **Tools/Frameworks** (Docker, FastAPI); use plain bullets |
-| **Experience** | Start each bullet with an action verb + measurable impact + embedded keyword (“Deployed Docker-based FastAPI recommender, cutting inference latency 40 ms”) |
+| **Experience** | Start each bullet with an action verb + measurable impact + embedded keyword ("Deployed Docker-based FastAPI recommender, cutting inference latency 40 ms") |
 | **Education/Certifications** | List formal degrees first, certs second; spell out acronyms once |
 
 ---
 
-## 3.7. Testing & Optimization Tools  
+### 3.7. Testing & Optimization Tools  
 
 | Tool | What It Does | How to Use |
 |------|--------------|-----------|
-| **Jobscan** | Compares résumé to a specific job description; returns a match score and keyword gaps | Iteratively tweak until you hit ≥ 75 % match |
-| **Resume Worded / TopResume** | Free résumé grader; flags formatting and ATS issues | Upload your file, apply fixes, rescan |
-| **Indeed “Preview Résumé”** | Shows how their ATS will parse your doc | Paste résumé text, check for missing fields |
+| **[Jobscan](https://www.jobscan.co/)** | Compares a résumé to a specific job description; returns a match score and keyword gaps :contentReference[oaicite:0]{index=0} | Iteratively tweak until you reach ≥ 75 % match |
+| **[Resume Worded](https://resumeworded.com/)**  /  **[TopResume](https://topresume.com/resume-review)** | Free résumé graders that flag formatting and ATS issues :contentReference[oaicite:1]{index=1} | Upload your file, apply the fixes they suggest, then rescan |
+| **[Indeed "Preview Résumé"](https://support.indeed.com/hc/en-us/articles/28827071763981-Resume-Options-Menu-Managing-a-Resume)** | Shows how Indeed's ATS will parse your document before you submit :contentReference[oaicite:2]{index=2} | Paste or upload your résumé text and check for missing fields |
+
 
 ---
 
 ## 3.8. Advanced Optimization Tips  
 
-- **Mirror the job title** exactly once under your name if you’re a close fit (e.g., *Machine Learning Engineer*).  
-- **Use both singular and plural forms** of core skills (“neural network,” “neural networks”).  
+- **Mirror the job title** exactly once under your name if you're a close fit (e.g., *Machine Learning Engineer*).  
+- **Use both singular and plural forms** of core skills ("neural network," "neural networks").  
 - **Embed context keywords** in accomplishments, not just a skills list—ATS algorithms weight experience bullets more heavily.  
 - **Keep dates in the same format** (MM/YYYY or YYYY) throughout; inconsistent patterns can scramble timelines.  
-- **Refresh older roles** with 1-line summaries so long careers don’t exceed two pages; ATS ranks recent matches higher.  
+- **Refresh older roles** with 1-line summaries so long careers don't exceed two pages; ATS ranks recent matches higher.  
 
 ---
 
@@ -438,163 +431,114 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 - [rover-resume](https://github.com/subidit/rover-resume)
 - [GitHub Search: Popular LaTeX Resumes](https://github.com/search?q=stars%3A%3E10+forks%3A%3E10+language%3ATeX+resume&type=repositories&ref=advsearch&s=stars&o=desc)
 
-# 5. Resume Font Guide
+## 5. Resume Font Guide  
 
-## 5.1. Why Inter + Montserrat?
-- **Modern look** ideal for startups and tech companies
-- **Highly readable** on screen and in print
-- **ATS-compliant** (friendly for resume scanners)
-- **Free and open-source** via Google Fonts:
-  - [Inter](https://fonts.google.com/specimen/Inter)
-  - [Montserrat](https://fonts.google.com/specimen/Montserrat)
+A resume's typography does more than look pretty—it determines whether your document is instantly readable by humans *and* correctly parsed by Applicant Tracking Systems (ATS). The rules that follow balance modern design with strict technical compatibility, so you can present a polished, professional image while ensuring every keyword survives the digital gatekeeper.  
 
 ---
 
-## 5.2. Avoid These for Resumes
-- **Times New Roman** – Overused and outdated
-- **Comic Sans / Papyrus** – Not professional
-- **Fancy display fonts** – Bad for ATS, hard to read
+## 5.1 Why Inter + Montserrat?  
+
+- **Modern, open-source, ATS-safe**: both use standard Latin glyphs, so parsers read them like any system font.  
+- **Optimised for screens and print**: Inter's high x-height aids long-form legibility; Montserrat's geometric forms give headers punch.  
+- **Free via Google Fonts**:  
+  - [Inter](https://fonts.google.com/specimen/Inter) (variable font, lighter file size)  
+  - [Montserrat](https://fonts.google.com/specimen/Montserrat)  
+- **Installation caveat**: not bundled with MS Office.  
+  - For **.docx**, embed fonts (*File → Options → Save → "Embed fonts"*).  
+  - If a posting allows **PDF**, export with fonts embedded to guarantee fidelity.  
+- **Usage rule**: Inter for **body**, Montserrat Bold for **headings only**.
 
 ---
 
-## 5.3. Modern Fonts for Tech & Startups
-Perfect for innovation-driven, digital-first environments.
+## 5.2 Fonts to Avoid (and Why)  
 
-| Font              | Style       | Why It's Great                                  |
-|-------------------|-------------|-------------------------------------------------|
-| **Roboto**        | Sans-serif  | Clean, modern, used in Android & Google tools   |
-| **Lato**          | Sans-serif  | Friendly, sleek, and balanced                   |
-| **Inter**         | Sans-serif  | Optimized for digital UI, open and readable     |
-| **Montserrat**    | Sans-serif  | Bold, geometric, stylish for headers            |
-| **Source Sans Pro**| Sans-serif | Adobe-designed, clean and modern                |
+- **Comic Sans / Papyrus** – Unprofessional; credibility killer.  
+- **Display or script faces** – Contain non-standard ligatures that can scramble ATS parsing.  
+- **Icon/Web fonts** (e.g., Font Awesome) – ATS cannot read icons; vital info disappears.  
+- **Times New Roman** – Perfectly legible but signals a dated aesthetic; reserve for ultra-traditional fields (law, academia) only.  
 
-**Tips:**
-- Use **Inter** or **Roboto** for body, **Montserrat** or **Lato** for headers  
+---
+
+## 5.3 Modern Fonts for Tech & Start-ups  
+
+| Font                | Style      | Best Use & Rationale                                        |
+|---------------------|------------|-------------------------------------------------------------|
+| **Inter**           | Sans-serif | Primary body font; variable weights, excellent digital legibility |
+| **Roboto**          | Sans-serif | Alternative body font; familiar to Android & Google users   |
+| **Lato**            | Sans-serif | Friendly tone; ideal for sub-headings                       |
+| **Montserrat**      | Sans-serif | **Headers only** – wide letterforms make section titles pop |
+| **Source Sans Pro** | Sans-serif | Adobe-designed fallback if Inter isn't available            |
+
+**Layout tips (digital-first résumé):**  
+- Body: **Inter or Roboto 10.5–11 pt**  
+- Headings: **Montserrat Bold 14–16 pt**  
 - Line spacing: **1.25–1.5**  
-- Margins: **0.5–0.75 inch**  
-- Keep layout clean and ATS-friendly
+- Margins: **0.65–0.75 in**  
+- Always **embed** fonts or attach as PDF if allowed.
 
 ---
 
-## 5.4. Classic & Safe Resume Fonts
-Great for general, traditional, or academic roles.
+## 5.4 Classic & Safe Fonts (Traditional Roles)  
 
-| Font         | Style       | Why Use It                          |
-|--------------|-------------|-------------------------------------|
-| **Calibri**  | Sans-serif  | Microsoft default, modern, ATS-safe |
-| **Helvetica**| Sans-serif  | Clean, professional, widely respected |
-| **Georgia**  | Serif       | Screen-friendly, elegant classic    |
-| **Cambria**  | Serif       | Print-optimized, balanced            |
-| **Garamond** | Serif       | Elegant and traditional (great for CVs) |
+| Font         | Style      | Why Use It                                       |
+|--------------|------------|--------------------------------------------------|
+| **Calibri**  | Sans-serif | MS Office default; clean and ATS-safe            |
+| **Cambria**  | Serif      | Designed for on-screen reading; looks crisp in print |
+| **Georgia**  | Serif      | Elegant yet legible at small sizes               |
+| **Garamond** | Serif      | Traditional academic CVs; use ≥ 11 pt            |
+| **Helvetica**| Sans-serif | Timeless, but may need licensing on Windows      |
 
-**Tips:**
-- Font size: **10–12 pt** body, **12–14 pt** headers  
-- Stick to one font for consistency  
-- Avoid outdated or playful fonts like Comic Sans or Times New Roman
+**Guidelines:**  
+- Limit yourself to **one body font** plus **one heading font**.  
+- Body size **10–12 pt**; headings **12–14 pt** for serif, **14–16 pt** for sans-serif.  
+- Shun any font that swaps letters for glyphs or advanced ligatures.
 
-# 6. LaTeX Environment for Cursor AI
+---
 
-This project provides a full-featured LaTeX environment that works seamlessly with Cursor AI's assistance features. It uses Docker containers to provide a consistent development experience with all necessary LaTeX packages pre-installed.
+## 5.5. Definitive Resume Typography & Layout Rules (2025)
 
-## 6.1. Features
+Follow every point exactly—no substitutes, no alternatives.
 
-- **Full TeX Live 2025**: Complete and up-to-date LaTeX distribution with comprehensive package support
-- **Debian-Based Container**: Reliable Debian foundation for better compatibility with LaTeX packages
-- **Cursor AI Integration**: Works with Cursor's AI assistant for code completion and generation
-- **Real-time Compilation**: Documents compile automatically on save
-- **PDF Preview**: Built-in PDF viewer
-- **Syntax Highlighting and Formatting**: Advanced LaTeX editing features
-- **Spell and Grammar Checking**: Integrated spelling and grammar tools
+1. **Fonts & Sizes**  
+   * **Body text:** **Inter 11 pt**  
+   * **Section headings:** **Montserrat Bold 14 – 16 pt**  
+   * Rationale: Both fonts are Google-hosted, screen-optimized, and confirmed ATS-compatible. :contentReference[oaicite:0]{index=0}  
 
-## 6.2. Getting Started
+2. **File Format**  
+   * Save as **.docx**.  
+   * In Word: *File → Options → Save → "Embed fonts in the file"*.  
+   * Export to PDF **only** if the job post demands it. :contentReference[oaicite:1]{index=1}  
 
-### 6.2.1. Prerequisites
+3. **Layout**  
+   * **Single column**, fully **left-aligned**.  
+   * Standard section titles only: **Summary, Experience, Education, Skills, Certifications**.  
+   * No tables, text boxes, graphics, or page borders.
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
-- [Cursor](https://cursor.sh/) IDE installed
-- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed in Cursor
+4. **Spacing & Margins**  
+   * Line spacing **1.3** (Exactly 15 pt in Word).  
+   * **6 pt** space *after* each paragraph; no extra space *before*.  
+   * Page margins **0.65 in** on all sides.
 
-### 6.2.2. Opening the Project
+5. **Text Styling**  
+   * **Bold** section headings; keep body text regular weight.  
+   * Use **•** round bullets; avoid sub-bullets or icons.  
+   * Text color **#000000** on a white background—no shading or color accents.
 
-1. Clone this repository to your local machine
-2. Open the folder in Cursor IDE
-3. When prompted, click "Reopen in Container" or use the command palette:
-   - Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
-   - Type `Remote-Containers: Reopen in Container` and select it
+6. **Content Formatting**  
+   * Each bullet: **Action verb + metric + keyword**  
+     *Example:* "Deployed Docker-based FastAPI recommender, reducing latency **40 ms**."  
+   * Dates right-aligned in the same format (**Jan 2023 – Apr 2025**).  
+   * List acronyms once with the long form: "Natural Language Processing (**NLP**).".
 
-The first time you open the container, it may take several minutes to download and set up the environment.
+7. **File Naming Convention**  
+   * `Lastname_Firstname_TargetRole.docx`  
+     *Example:* `Rezaee_Mostafa_ML_Engineer.docx`
 
-## 6.3. Writing LaTeX
+8. **Final QA Checklist (60 seconds)**  
+   1. Open in **Notepad**—all text should appear in the correct order.  
+   2. Run a quick scan with Jobscan or Resume Worded; fix any missing keywords.  
+   3. Confirm file size ≤ 500 KB (embedded fonts increase size slightly).  
+   4. Re-save; do **not** alter styling after embedding fonts.
 
-1. Open or create `.tex` files in the editor
-2. Save the file to automatically compile it
-3. View the PDF in the built-in viewer (opens automatically)
-4. Use Cursor's AI features for assistance:
-   - `Ctrl+K` or `Cmd+K` for inline AI completions
-   - `Ctrl+L` or `Cmd+L` for AI chat with context about your LaTeX code
-
-## 6.4. Customizing the Environment
-
-- Add additional LaTeX packages in `.devcontainer/devcontainer.json` under `postCreateCommand`
-- Modify LaTeX Workshop settings in `.devcontainer/devcontainer.json`
-- Change compilation parameters in the LaTeX Workshop configuration
-
-## 6.5. Troubleshooting
-
-- **Container won't start**: Make sure Docker is running
-- **Compilation errors**: Check the LaTeX Workshop output panel for details
-- **Missing packages**: Add them using `tlmgr install package-name` in terminal or in postCreateCommand
-
-## 6.6. Learning Resources
-
-- [LaTeX Documentation](https://www.latex-project.org/help/documentation/)
-- [Overleaf LaTeX Learning Resources](https://www.overleaf.com/learn)
-- [LaTeX Workshop Documentation](https://github.com/James-Yu/LaTeX-Workshop/wiki)
-
-## 6.7. How to Use Your New LaTeX Environment with Cursor AI
-
-I've created a complete LaTeX development environment integrated with Cursor's AI features. Here's how to use it:
-
-### 6.7.1. Getting Started
-
-1. Make sure you have **Docker Desktop** installed and running on your system
-2. Install the **Dev Containers** extension in Cursor
-3. Open the project folder in Cursor
-4. When prompted, select "Reopen in Container" (or use `Cmd+Shift+P` or `Ctrl+Shift+P` and search for `Remote-Containers: Reopen in Container`)
-
-This will start building and running the Docker container with the complete TeX Live 2025 distribution. It may take several minutes the first time, as it needs to download the Docker image (approximately 4-5 GB).
-
-### 6.7.2. Features of This Setup
-
-- **Complete TeX Live 2025**: The full, modern TeX Live distribution (4.4 GB installed)
-- **Debian-Based Container**: Built on Debian for reliable package compatibility
-- **Auto-Compilation**: Documents compile when you save
-- **Built-in PDF Viewer**: View PDFs directly in Cursor
-- **LaTeX-Specific Tools**: Formatting, spell checking, and syntax validation
-- **Cursor AI Integration**: Use `Cmd+K` or `Ctrl+K` for AI assistance with your LaTeX code
-
-### 6.7.3. Working with LaTeX and AI
-
-The real power comes from combining LaTeX with Cursor's AI features:
-
-1. Edit the `example.tex` file to see how the environment works
-2. Save the file to trigger automatic compilation
-3. Use Cursor's AI to help with LaTeX:
-   - Ask for help with complex formulas: "Show me how to create a matrix in LaTeX"
-   - Get help with document structure: "Help me create a bibliography section"
-   - Debug errors: "Why is my equation not compiling?"
-
-### 6.7.4. Benefits Over Overleaf/ShareLaTeX
-
-This TeX Live 2025 setup gives you several advantages over web-based options like Overleaf or ShareLaTeX:
-
-1. **Local Development**: Work offline with all your files
-2. **Powerful AI Integration**: Get AI assistance that understands your entire codebase
-3. **Customization**: Easily add packages or modify the build process
-4. **Version Control**: Seamlessly use Git for collaboration
-5. **Performance**: Better performance for large documents than web-based editors
-6. **Modern Distribution**: Uses the latest TeX Live 2025 on a reliable Debian foundation
-
-All this while still having the same complete LaTeX environment you'd get with Overleaf or ShareLaTeX, plus AI assistance to make writing LaTeX significantly easier.
-
-To get started, just open your example.tex file and begin editing!
+Apply these eight rules verbatim and your résumé will render identically on any recruiter's screen, remain perfectly parsable by every major Applicant Tracking System, and present a crisp, modern aesthetic suited to tech or start-up roles.
