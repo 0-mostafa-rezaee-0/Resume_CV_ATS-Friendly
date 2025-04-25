@@ -120,12 +120,12 @@ By following this repository's guidance, you will learn:
 
 ```
 Folder PATH listing
-+---docs                                           <-- Documentation resources
-│       README.md                                  <-- Documentation overview
++---.devcontainer                                  <-- Dev container config
+│       devcontainer.json                          <-- VS Code dev container settings
+│       docker-compose.yml                         <-- Docker compose configuration
+│       README.md                                  <-- Dev container documentation
 │
-+---examples                                       <-- Sample resumes
-│       CV_JJalali.pdf                             <-- Example resume PDF
-│       README.md                                  <-- Examples overview
++---build                                          <-- Build artifacts directory
 │
 +---fonts                                          <-- Resume fonts
 │       Inter-VariableFont_opsz,wght.ttf           <-- Inter font file
@@ -141,24 +141,24 @@ Folder PATH listing
 │       README.md                                  <-- Images documentation
 │
 +---LaTex                                          <-- LaTeX resume versions
+│   +---example-1                                  <-- Example resume 1
+│   +---example_resume                             <-- Example resume template
+│   +---Mostafa_ats_optimized                      <-- ATS optimized resume
 │   +---Mostafa_Resume-1                           <-- Resume version 1
 │   +---Mostafa_Resume-2                           <-- Resume version 2
 │   +---Mostafa_Resume-3                           <-- Resume version 3
 │   +---Mostafa_Resume-4                           <-- Resume version 4
+│   +---resume                                     <-- Basic resume template
 │   │
 │       README.md                                  <-- LaTeX directory overview
 │
-+---templates                                      <-- Resume templates
-│   +---ats_optimized                              <-- ATS-friendly resume template
-│   │   +---fonts                                  <-- Template-specific fonts
-│   │   │
-│   │       ats_optimized_resume.tex               <-- LaTeX source file
-│   │       ats_optimized_resume.pdf               <-- PDF preview
-│   │       README.md                              <-- Template documentation
-│   │
-│       .gitignore                                 <-- Git exclusions
-│       LICENSE                                    <-- License information
-│       README.md                                  <-- Project overview
++---PDF                                            <-- PDF examples
+│       CV_JJalali.pdf                             <-- Example PDF resume
+│       README.md                                  <-- PDF directory documentation
+│
+│   .gitignore                                     <-- Git exclusions
+│   LICENSE                                        <-- License information
+│   README.md                                      <-- Project overview
 ```
 
 # 2. LaTeX Environment Options
@@ -169,51 +169,62 @@ Based on our experience, we recommend two primary approaches for working with La
 
 ### 2.1.1. Docker-Based LaTeX Environment
 
-- **Full Capabilities:** Docker-based LaTeX provides **complete functionality** equivalent to traditional installations
-- **Environment Control:** Offers **full control** over package installation and configuration
-- **Consistency:** Ensures **identical behavior** across different machines and operating systems
-- **Integration:** Works seamlessly with **local development tools** like Cursor Copilot
-- **Collaboration:** Can be paired with **GitHub workflows** for version control and team collaboration
-- **Isolation:** Keeps LaTeX environment **separate from host system**, preventing conflicts
-- **Portability:** Easy to replicate environment on different machines without lengthy setup
+**Best For:**   
+- Users who need AI assistance with Cursor Copilot, need offline capabilities, or prefer working in their own development environment.
 
-**Best For:** Users who need AI assistance with Cursor Copilot, need offline capabilities, or prefer working in their own development environment.
+| Feature | Description |
+|---------|-------------|
+| **Full Capabilities** | Docker-based LaTeX provides **complete functionality** equivalent to traditional installations |
+| **Environment Control** | Offers **full control** over package installation and configuration |
+| **Consistency** | Ensures **identical behavior** across different machines and operating systems |
+| **Integration** | Works seamlessly with **local development tools** like Cursor Copilot |
+| **Collaboration** | Can be paired with **GitHub workflows** for version control and team collaboration |
+| **Isolation** | Keeps LaTeX environment **separate from host system**, preventing conflicts |
+| **Portability** | Easy to replicate environment on different machines without lengthy setup |
 
 ### 2.1.2. Overleaf Platform
 
-- **Accessibility:** **Web-based interface** accessible from any device with internet connection
-- **Zero Setup:** Eliminates need for local installation or configuration
-- **Built-in Collaboration:** Supports **real-time editing** with multiple users simultaneously
-- **User-Friendly:** Designed with **intuitive interface** for both beginners and advanced users
-- **Templates:** Provides extensive library of pre-designed templates
-- **Limited Offline Use:** Requires internet connection for most functionality
+**Best For:**     
+- Users who prioritize ease of use, frequent collaboration, or need to access documents from multiple devices without setup.
 
-**Best For:** Users who prioritize ease of use, frequent collaboration, or need to access documents from multiple devices without setup.
+| Feature | Description |
+|---------|-------------|
+| **Accessibility** | **Web-based interface** accessible from any device with internet connection |
+| **Zero Setup** | Eliminates need for local installation or configuration |
+| **Built-in Collaboration** | Supports **real-time editing** with multiple users simultaneously |
+| **User-Friendly** | Designed with **intuitive interface** for both beginners and advanced users |
+| **Templates** | Provides extensive library of pre-designed templates |
+| **Limited Offline Use** | Requires internet connection for most functionality |
+
 
 ## 2.2. Recommended Docker Image
 
-Our repository uses the **qdm12/latexdevcontainer** Docker image (`ghcr.io/qdm12/latexdevcontainer:latest-full`), specifically configured for Cursor Copilot integration. This image was chosen for several important reasons:
+Our repository uses the `texlive/texlive` Docker image (`texlive/texlive:latest`), specifically configured for Cursor Copilot integration. This image was chosen for several important reasons:
 
 ### 2.2.1. Why We Chose This Image
 
-- **Complete TeXLive Distribution:** Includes the full TeX Live 2023 distribution with all LaTeX packages
-- **Optimized for Dev Containers:** Built specifically for VS Code/Cursor dev container workflows
-- **Pre-configured LaTeX Workshop:** Comes with settings for the LaTeX Workshop extension
-- **Auto-Updates:** Updates all TeX packages on container startup
-- **Lightweight Base:** Built on Alpine Linux for faster startup times
-- **Regular Maintenance:** Actively maintained with frequent updates
+| Feature | Description |
+|---------|-------------|
+| **Complete TeXLive Distribution** | Includes the full TeX Live distribution with most LaTeX packages |
+| **Ubuntu-Based** | Built on Ubuntu for better compatibility with Cursor AI |
+| **Optimized for Dev Containers** | Works well with VS Code/Cursor dev container workflows |
+| **Pre-configured LaTeX Workshop** | Works seamlessly with the LaTeX Workshop extension |
+| **Regular Maintenance** | Actively maintained with updates |
 
 ### 2.2.2. How to Use the Docker Image
 
 1. **Prerequisites:**
    - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
    - Install [Cursor](https://cursor.sh/) IDE
-   - Install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
+   - Install the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
 
 2. **Getting Started:**
+   - Start Docker Desktop and ensure it's running
    - Clone this repository
-   - Open it in Cursor
-   - When prompted, select "Reopen in Container" (or use the Command Palette: `Ctrl+Shift+P` or `Cmd+Shift+P` → `Remote-Containers: Reopen in Container`)
+   - Navigate to the repository directory in your terminal
+   - Run `docker-compose -f .devcontainer/docker-compose.yml up -d` to start the container
+   - Open the project in Cursor
+   - When prompted, select `Reopen in Container` (or use the Command Palette: `Ctrl+Shift+P` or `Cmd+Shift+P` → `Dev Containers: Rebuild and Reopen in Container`)
    - The container will build automatically with all LaTeX packages installed
 
 3. **Using the Environment:**
@@ -227,11 +238,14 @@ This approach removes all the headaches of local LaTeX installation while provid
 ### 2.2.3. Technical Details
 
 Our container setup includes:
-- **LaTeX Workshop** extension for compilation and preview
-- **LaTeX Utilities** for enhanced LaTeX editing
-- **LTeX** for grammar checking in LaTeX documents
-- **Code Spell Checker** for spell checking
-- **Copilot** integration for AI assistance
+
+| Extension | Purpose | Benefits |
+|-----------|---------|----------|
+| **LaTeX Workshop** | Compilation and preview | Automatic builds, PDF preview, syntax highlighting |
+| **LaTeX Utilities** | Enhanced LaTeX editing | Smart environments, math preview, better snippets |
+| **LTeX** | Grammar checking | Language-aware proofreading for LaTeX documents |
+| **Code Spell Checker** | Spell checking | Identifies typos in code and text |
+| **Copilot** | AI assistance | Code completion and suggestions for LaTeX |
 
 The container is configured to:
 - Automatically build LaTeX documents on save
@@ -243,10 +257,27 @@ You can see the full configuration in the `.devcontainer/devcontainer.json` file
 
 ### 2.2.4. Image Size and Performance Considerations
 
-The Docker image (`ghcr.io/qdm12/latexdevcontainer:latest-full`) is large due to the comprehensive nature of the full TeX Live distribution:
+The Docker image (`texlive/texlive:latest`) is large due to the comprehensive nature of the full TeX Live distribution:
 
 - **Download size:** Approximately 4-5 GB
 - **Installed size:** Approximately 7-9 GB on disk
+
+You can check Docker image sizes on your host system (not inside the container) with:
+```bash
+# List all Docker images with sizes
+docker images
+
+# Or check a specific image (returns empty if not downloaded yet)
+docker images texlive/texlive:latest
+```
+
+If a specific image search returns no results, it means that image hasn't been downloaded to your system yet. The image is only downloaded when you first use it.
+
+Example output from a system with the ShareLaTeX image:
+```
+IMAGE ID       REPOSITORY              TAG       SIZE      CREATED
+637631dedf09   sharelatex/sharelatex   latest    2.08GB    3 weeks ago
+```
 
 This is normal for a complete LaTeX environment that includes thousands of packages, fonts, and documentation. Some key points to understand:
 
@@ -429,7 +460,7 @@ This project provides a full-featured LaTeX environment that works seamlessly wi
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
 - [Cursor](https://cursor.sh/) IDE installed
-- [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed in Cursor
+- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed in Cursor
 
 ### 6.2.2. Opening the Project
 
@@ -475,7 +506,7 @@ I've created a complete LaTeX development environment integrated with Cursor's A
 ### 6.7.1. Getting Started
 
 1. Make sure you have **Docker Desktop** installed and running on your system
-2. Install the **Remote - Containers** extension in Cursor
+2. Install the **Dev Containers** extension in Cursor
 3. Open the project folder in Cursor
 4. When prompted, select "Reopen in Container" (or use `Cmd+Shift+P` or `Ctrl+Shift+P` and search for `Remote-Containers: Reopen in Container`)
 

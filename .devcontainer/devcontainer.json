@@ -1,11 +1,10 @@
 {
-  "name": "LaTeX Environment (Overleaf-like)",
-  "image": "sharelatex/sharelatex",
+  "name": "LaTeX Environment (Cursor AI Integration)",
+  "image": "texlive/texlive:latest",
   "customizations": {
     "vscode": {
       "extensions": [
         "james-yu.latex-workshop",
-        "ms-vscode.cpptools",
         "tecosaur.latex-utilities",
         "valentjn.vscode-ltex",
         "streetsidesoftware.code-spell-checker",
@@ -17,7 +16,9 @@
         "latex-workshop.latex.recipes": [
           {
             "name": "latexmk",
-            "tools": ["latexmk"]
+            "tools": [
+              "latexmk"
+            ]
           }
         ],
         "latex-workshop.latex.tools": [
@@ -35,8 +36,27 @@
         ],
         "latex-workshop.view.pdf.viewer": "tab",
         "latex-workshop.latex.clean.fileTypes": [
-          "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", 
-          "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk", "*.synctex.gz", "*.run.xml"
+          "*.aux",
+          "*.bbl",
+          "*.blg",
+          "*.idx",
+          "*.ind",
+          "*.lof",
+          "*.lot",
+          "*.out",
+          "*.toc",
+          "*.acn",
+          "*.acr",
+          "*.alg",
+          "*.glg",
+          "*.glo",
+          "*.gls",
+          "*.ist",
+          "*.fls",
+          "*.log",
+          "*.fdb_latexmk",
+          "*.synctex.gz",
+          "*.run.xml"
         ],
         "editor.formatOnSave": true,
         "latex-workshop.latex.autoClean.run": "onBuilt",
@@ -49,8 +69,8 @@
     }
   },
   "remoteUser": "root",
-  "postCreateCommand": "mkdir -p build",
+  "postCreateCommand": "apt-get update && apt-get install -y latexmk && mkdir -p build",
   "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
+    "PATH": "${containerEnv:PATH}:/usr/local/texlive/current/bin/x86_64-linux"
   }
-} 
+}

@@ -1,7 +1,6 @@
-version: '3'
 services:
   latex:
-    image: sharelatex/sharelatex
+    image: texlive/texlive:latest
     volumes:
       - ..:/workspaces:cached
       - latex-extensions:/root/.vscode-server/extensions
