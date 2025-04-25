@@ -29,7 +29,7 @@ This repository provides comprehensive resources and practical guidance for crea
               <a href="#21-latex-environment-choices">2.1. LaTeX Environment Choices</a><br>
               <a href="#22-recommended-docker-image">2.2. Recommended Docker Image</a><br>
               <a href="#23-best-latex-extension-for-vs-code">2.3. Best LaTeX Extension for VS Code</a><br>
-              <a href="#24-using-sharelatex-docker-container">2.4. Using ShareLaTeX Docker Container</a><br>
+              <a href="#24-alternative-latex-environments">2.4. Alternative LaTeX Environments</a><br>
   </div>
 </details>
  
@@ -205,11 +205,12 @@ Our repository uses the `texlive/texlive` Docker image (`texlive/texlive:latest`
 
 | Feature | Description |
 |---------|-------------|
-| **Complete TeXLive Distribution** | Includes the full TeX Live distribution with most LaTeX packages |
-| **Ubuntu-Based** | Built on Ubuntu for better compatibility with Cursor AI |
+| **Complete TeXLive Distribution** | Includes the full TeX Live 2025 distribution with most LaTeX packages |
+| **Debian-Based** | Built on Debian for better compatibility with Cursor AI |
 | **Optimized for Dev Containers** | Works well with VS Code/Cursor dev container workflows |
 | **Pre-configured LaTeX Workshop** | Works seamlessly with the LaTeX Workshop extension |
 | **Regular Maintenance** | Actively maintained with updates |
+| **Avoid Alpine Issues** | Prevents common Alpine Linux compatibility problems with LaTeX |
 
 ### 2.2.2. How to Use the Docker Image
 
@@ -259,8 +260,22 @@ You can see the full configuration in the `.devcontainer/devcontainer.json` file
 
 The Docker image (`texlive/texlive:latest`) is large due to the comprehensive nature of the full TeX Live distribution:
 
-- **Download size:** Approximately 4-5 GB
-- **Installed size:** Approximately 7-9 GB on disk
+- **Actual installed size:** 4.4 GB for the TeX Live installation in our current container
+- **Total container size:** Around 4-5 GB download, using approximately 5-7 GB on disk
+
+You can check the size of your TeX Live installation inside the container with:
+```bash
+# Check TeX Live installation size
+du -sh /usr/local/texlive
+
+# Check overall disk usage
+df -h
+```
+
+Example output showing the TeX Live installation size:
+```
+4.4G    /usr/local/texlive
+```
 
 You can check Docker image sizes on your host system (not inside the container) with:
 ```bash
@@ -273,10 +288,10 @@ docker images texlive/texlive:latest
 
 If a specific image search returns no results, it means that image hasn't been downloaded to your system yet. The image is only downloaded when you first use it.
 
-Example output from a system with the ShareLaTeX image:
+Example output showing the TeX Live image:
 ```
-IMAGE ID       REPOSITORY              TAG       SIZE      CREATED
-637631dedf09   sharelatex/sharelatex   latest    2.08GB    3 weeks ago
+IMAGE ID       REPOSITORY            TAG       SIZE      CREATED
+8a56b68b4458   texlive/texlive       latest    4.51GB    2 weeks ago
 ```
 
 This is normal for a complete LaTeX environment that includes thousands of packages, fonts, and documentation. Some key points to understand:
@@ -306,50 +321,22 @@ Use the **[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=J
 - IntelliSense for citations, labels, and refs
 - Works with both Windows and WSL backends
 
-## 2.4. Using the ShareLaTeX Docker Container
+## 2.4. Alternative LaTeX Environments
 
-For those using the ShareLaTeX/Overleaf Docker container (`sharelatex/sharelatex`), follow these steps for proper usage:
+While this repository uses and recommends the TeX Live 2025 environment described above, some users may prefer alternative LaTeX environments:
 
-### Starting the Container
-```bash
-docker run -d -p 80:80 sharelatex/sharelatex
-```
+### 2.4.1. Web-Based Options
 
-### Workflow for Using ShareLaTeX
-1. Start the container when you want to work on LaTeX documents
-2. Access the ShareLaTeX interface at http://localhost or http://localhost:80
-3. When finished, stop the container to conserve system resources
+- **Overleaf**: A popular online LaTeX editor with real-time collaboration
+- **ShareLaTeX Docker Container**: For those who want a local web-based interface:
+  ```bash
+  # Basic command to run ShareLaTeX locally
+  docker run -d -p 80:80 -v sharelatex_data:/var/lib/sharelatex --name mylatex sharelatex/sharelatex
+  ```
 
-### Stopping and Restarting
-To stop the container when you're done:
-```bash
-docker stop [CONTAINER_ID or CONTAINER_NAME]
-```
+These alternatives offer web-based interfaces that some users may find more familiar. However, they lack direct integration with Cursor AI and have more limited offline capabilities compared to the TeX Live setup.
 
-Example:
-```bash
-docker stop distracted_khorana
-```
-
-To start the same container again later:
-```bash
-docker start [CONTAINER_ID or CONTAINER_NAME]
-```
-
-Example:
-```bash
-docker start distracted_khorana
-```
-
-### Workflow with Cursor
-The recommended workflow when using with Cursor:
-1. Stop the container when you're done: `docker stop [CONTAINER_NAME]`
-2. Later, when you want to work again:
-   - Start the container: `docker start [CONTAINER_NAME]`
-   - Open Cursor
-   - Reopen your project in the dev container through Cursor
-
-This ensures all your work is preserved between sessions without needing to recreate containers.
+For most resume projects, the TeX Live 2025 environment recommended in section 2.2 provides the best combination of features, flexibility, and AI integration.
 
 # 3. Applicant Tracking Systems (ATS)
 
@@ -366,11 +353,13 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 
 ## 3.2. How ATS Systems Process Resumes
 
-1. **Resume Parsing**: ATS extracts text from your document and categorizes information into predefined fields (name, work history, education, skills).
-2. **Keyword Matching**: Compares your resume against job description keywords and qualification requirements.
-3. **Ranking**: Assigns scores to candidates based on matching criteria.
-4. **Database Storage**: Saves your resume and information in searchable format.
-5. **Filtering**: Screens out candidates who don't meet minimum requirements.
+| Process Step | Description |
+|--------------|-------------|
+| **Resume Parsing** | ATS extracts text from your document and categorizes information into predefined fields (name, work history, education, skills) |
+| **Keyword Matching** | Compares your resume against job description keywords and qualification requirements |
+| **Ranking** | Assigns scores to candidates based on matching criteria |
+| **Database Storage** | Saves your resume and information in searchable format |
+| **Filtering** | Screens out candidates who don't meet minimum requirements |
 
 ## 3.3. Key Strategies for ATS Optimization
 
@@ -381,6 +370,68 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 | **Include Hard Skills**       | List relevant technical skills, certifications, and software proficiencies |
 | **Format Simply**             | Use clean, standard fonts and straightforward layouts                      |
 | **Keyword Placement**         | Include key terms in work experience (not just skills section)             |
+
+## 3.4. Formatting Rules for ATS Compatibility  
+
+| Guideline | Why It Matters | Quick Tip |
+|-----------|----------------|-----------|
+| **Stick to standard fonts** | ATS parsers are trained on common system fonts; exotic ones can become garbled text | Use Arial, Calibri, or Times New Roman at 10–12 pt |
+| **Use a single-column layout** | Columns, text boxes, headers/footers, and graphics can break parsing | Build in a plain Word doc, not a designer template |
+| **Save as .docx unless told otherwise** | Some ATS struggle with PDFs; .docx is universally readable | Switch to PDF only if the posting explicitly requires it |
+| **Left-align everything** | Ensures a predictable reading order | Avoid centering critical details like dates or job titles |
+| **Name the file clearly** | Recruiters search filenames inside the ATS | `Mostafa_Rezaee_ML_Engineer.docx` |
+
+---
+
+## 3.5. Common Mistakes That Trigger Rejection  
+
+1. **Graphic résumé templates** (infographics, headshots, charts)  
+2. **Keyword stuffing**—repeating “Python” 20 × with no context lowers match score  
+3. **Important data in images** (e.g., certification logos)  
+4. **Acronyms without the long form**: write “Natural Language Processing (NLP)” the first time  
+5. **Uncommon section titles**: use “Professional Experience,” not “My Journey”  
+
+---
+
+## 3.6. Section & Field Best Practices  
+
+| Section | Tips for ATS |
+|---------|--------------|
+| **Contact** | Put phone, email, LinkedIn on one line; skip graphics |
+| **Professional Summary** | 2–3 lines rich in role-specific keywords (“Dockerized ML APIs” vs “hard-working professional”) |
+| **Skills** | Separate **Hard Skills** (Python, Kubernetes) and **Tools/Frameworks** (Docker, FastAPI); use plain bullets |
+| **Experience** | Start each bullet with an action verb + measurable impact + embedded keyword (“Deployed Docker-based FastAPI recommender, cutting inference latency 40 ms”) |
+| **Education/Certifications** | List formal degrees first, certs second; spell out acronyms once |
+
+---
+
+## 3.7. Testing & Optimization Tools  
+
+| Tool | What It Does | How to Use |
+|------|--------------|-----------|
+| **Jobscan** | Compares résumé to a specific job description; returns a match score and keyword gaps | Iteratively tweak until you hit ≥ 75 % match |
+| **Resume Worded / TopResume** | Free résumé grader; flags formatting and ATS issues | Upload your file, apply fixes, rescan |
+| **Indeed “Preview Résumé”** | Shows how their ATS will parse your doc | Paste résumé text, check for missing fields |
+
+---
+
+## 3.8. Advanced Optimization Tips  
+
+- **Mirror the job title** exactly once under your name if you’re a close fit (e.g., *Machine Learning Engineer*).  
+- **Use both singular and plural forms** of core skills (“neural network,” “neural networks”).  
+- **Embed context keywords** in accomplishments, not just a skills list—ATS algorithms weight experience bullets more heavily.  
+- **Keep dates in the same format** (MM/YYYY or YYYY) throughout; inconsistent patterns can scramble timelines.  
+- **Refresh older roles** with 1-line summaries so long careers don’t exceed two pages; ATS ranks recent matches higher.  
+
+---
+
+## 3.9. Quick Self-Check Before Submitting  
+
+1. **Open the file in a plain-text editor** (e.g., Notepad). If everything is legible and in the right order, an ATS can read it.  
+2. **Run a test scan** using one of the tools above.  
+3. **Verify keyword density** is natural—aim for ~2 % of total words.  
+4. **Confirm file name & format** follow the job posting instructions.  
+
 
 # 4. Best Examples
 
@@ -447,7 +498,8 @@ This project provides a full-featured LaTeX environment that works seamlessly wi
 
 ## 6.1. Features
 
-- **Full TeXLive Installation**: Complete LaTeX environment similar to Overleaf
+- **Full TeX Live 2025**: Complete and up-to-date LaTeX distribution with comprehensive package support
+- **Debian-Based Container**: Reliable Debian foundation for better compatibility with LaTeX packages
 - **Cursor AI Integration**: Works with Cursor's AI assistant for code completion and generation
 - **Real-time Compilation**: Documents compile automatically on save
 - **PDF Preview**: Built-in PDF viewer
@@ -510,11 +562,12 @@ I've created a complete LaTeX development environment integrated with Cursor's A
 3. Open the project folder in Cursor
 4. When prompted, select "Reopen in Container" (or use `Cmd+Shift+P` or `Ctrl+Shift+P` and search for `Remote-Containers: Reopen in Container`)
 
-This will start building and running the Docker container with a full TeXLive installation. It may take several minutes the first time, as it needs to download the Docker image.
+This will start building and running the Docker container with the complete TeX Live 2025 distribution. It may take several minutes the first time, as it needs to download the Docker image (approximately 4-5 GB).
 
 ### 6.7.2. Features of This Setup
 
-- **Complete LaTeX Environment**: The full TeXLive distribution with all packages
+- **Complete TeX Live 2025**: The full, modern TeX Live distribution (4.4 GB installed)
+- **Debian-Based Container**: Built on Debian for reliable package compatibility
 - **Auto-Compilation**: Documents compile when you save
 - **Built-in PDF Viewer**: View PDFs directly in Cursor
 - **LaTeX-Specific Tools**: Formatting, spell checking, and syntax validation
@@ -531,16 +584,17 @@ The real power comes from combining LaTeX with Cursor's AI features:
    - Get help with document structure: "Help me create a bibliography section"
    - Debug errors: "Why is my equation not compiling?"
 
-### 6.7.4. Benefits Over Overleaf
+### 6.7.4. Benefits Over Overleaf/ShareLaTeX
 
-This setup gives you several advantages over Overleaf:
+This TeX Live 2025 setup gives you several advantages over web-based options like Overleaf or ShareLaTeX:
 
 1. **Local Development**: Work offline with all your files
 2. **Powerful AI Integration**: Get AI assistance that understands your entire codebase
 3. **Customization**: Easily add packages or modify the build process
 4. **Version Control**: Seamlessly use Git for collaboration
 5. **Performance**: Better performance for large documents than web-based editors
+6. **Modern Distribution**: Uses the latest TeX Live 2025 on a reliable Debian foundation
 
-All this while still having the same complete LaTeX environment you'd get with Overleaf, plus AI assistance to make writing LaTeX significantly easier.
+All this while still having the same complete LaTeX environment you'd get with Overleaf or ShareLaTeX, plus AI assistance to make writing LaTeX significantly easier.
 
 To get started, just open your example.tex file and begin editing!
