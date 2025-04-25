@@ -4,6 +4,9 @@ This will create your own copy of this project, which you can modify freely — 
 
 ---
 
+<div align="center">
+    <img src="images/banner.png" alt="banner" width="50%">
+</div>
 
 <h1 align="center">ATS-Friendly Resume Formatting Best Practices</h1>
 
@@ -436,8 +439,12 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 
 # 4. Best Examples
 
-- [rover-resume](https://github.com/subidit/rover-resume)
 - [GitHub Search: Popular LaTeX Resumes](https://github.com/search?q=stars%3A%3E10+forks%3A%3E10+language%3ATeX+resume&type=repositories&ref=advsearch&s=stars&o=desc)
+- [rover-resume](https://github.com/subidit/rover-resume)
+
+<div align="center">
+    <img src="images/base-rover.jpg" alt="base-rover" width="50%">
+</div>
 
 ## 5. Resume Font Guide  
 
