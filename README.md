@@ -13,6 +13,35 @@ This will create your own copy of this project, which you can modify freely — 
 
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions.
 
+## ⚡ Quick Start
+
+Getting started with this LaTeX resume environment is simple:
+
+1. **Prerequisites**: Install [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Cursor](https://cursor.sh/) or VS Code
+
+2. **Start Container**:
+   ```bash
+   # Clone this repository 
+   git clone <repository-url>
+   cd Resume_CV_ATS-Friendly
+   
+   # Start the container
+   docker-compose up -d  # or use alias: dcu
+   ```
+
+3. **Edit in Cursor/VS Code**:
+   - Open the project in Cursor/VS Code
+   - Select "Reopen in Container" when prompted
+   - Navigate to LaTeX directory and edit .tex files
+
+4. **Shutdown**:
+   ```bash
+   # When finished, shut down the container
+   docker-compose down  # or use alias: dcd
+   ```
+
+For detailed instructions, see the [Docker Compose Tutorial](docs/docker-compose-tutorial.md).
+
 ***Table of Contents***
 
 <details>
