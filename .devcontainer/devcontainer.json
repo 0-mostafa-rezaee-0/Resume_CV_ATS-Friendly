@@ -69,7 +69,7 @@
     }
   },
   "remoteUser": "root",
-  "postCreateCommand": "apt-get update && apt-get install -y latexmk && mkdir -p build",
+  "postCreateCommand": "apt-get update && apt-get install -y latexmk && mkdir -p build && echo '===== IMPORTANT: If LaTeX Workshop is not installed, please install it manually from the Extensions view ====='",
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/usr/local/texlive/current/bin/x86_64-linux"
   }
