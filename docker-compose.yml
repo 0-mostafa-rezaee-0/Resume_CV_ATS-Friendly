@@ -1,0 +1,15 @@
+services:
+  latex:
+    image: texlive/texlive:latest
+    volumes:
+      - .:/workspaces:cached
+      - latex-extensions:/root/.vscode-server/extensions
+      - latex-insiders-extensions:/root/.vscode-server-insiders/extensions
+    command: sleep infinity
+    environment:
+      - TZ=UTC
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    
+volumes:
+  latex-extensions:
+  latex-insiders-extensions: 

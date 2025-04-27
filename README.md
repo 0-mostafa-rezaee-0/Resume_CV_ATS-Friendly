@@ -160,6 +160,7 @@ Folder PATH listing
 │       README.md                                  <-- PDF directory documentation
 │
 │   .gitignore                                     <-- Git exclusions
+│   docker-compose.yml                             <-- Root Docker compose file (for quick dcu/dcd)
 │   LICENSE                                        <-- License information
 │   README.md                                      <-- Project overview
 ```
@@ -226,12 +227,18 @@ Our repository uses the `texlive/texlive` Docker image (`texlive/texlive:latest`
    - Start Docker Desktop and ensure it's running
    - Clone this repository
    - Navigate to the repository directory in your terminal
-   - Run `docker-compose -f .devcontainer/docker-compose.yml up -d` to start the container
+   - Run `docker-compose up -d` to start the container (or `docker-compose -f .devcontainer/docker-compose.yml up -d` if using the dev container version)
    - Open the project in Cursor
    - When prompted, select `Reopen in Container` (or use the Command Palette: `Ctrl+Shift+P` or `Cmd+Shift+P` → `Dev Containers: Rebuild and Reopen in Container`)
    - The container will build automatically with all LaTeX packages installed
 
-3. **Using the Environment:**
+3. **Quick Commands:**
+   - Start container: `docker-compose up -d` (or use alias `dcu`)
+   - Stop container: `docker-compose down` (or use alias `dcd`) 
+   - Check container status: `docker-compose ps`
+   - See the [Docker Compose Tutorial](docs/docker-compose-tutorial.md) for details on our dual docker-compose setup
+
+4. **Using the Environment:**
    - Edit .tex files directly in Cursor
    - Save to trigger automatic compilation (configured in LaTeX Workshop)
    - View the PDF in the built-in tab viewer
