@@ -39,7 +39,7 @@ Start the container:
 ```bash
 dcu
 # or
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 Stop the container:
@@ -58,7 +58,7 @@ docker-compose ps
 
 Start the container:
 ```bash
-docker-compose -f .devcontainer/docker-compose.yml up -d
+docker-compose -f .devcontainer/docker-compose.yml up -d --build
 ```
 
 Stop the container:
@@ -70,7 +70,7 @@ docker-compose -f .devcontainer/docker-compose.yml down
 
 Add these lines to your ~/.bashrc or ~/.zshrc file:
 ```bash
-alias dcu='docker-compose up -d'
+alias dcu='docker-compose up -d --build'
 alias dcd='docker-compose down'
 ```
 
@@ -79,7 +79,18 @@ Then apply the changes:
 source ~/.bashrc  # or source ~/.zshrc
 ```
 
-### 5. Benefits of the Dual Setup
+### 5. Why Use the --build Flag
+
+The `--build` flag forces Docker to rebuild the container images before starting containers. This is advantageous because it:
+
+- Ensures you're always using the latest image definition
+- Incorporates any changes to Dockerfiles or dependencies
+- Reduces "it works on my machine" problems by rebuilding consistently
+- Prevents issues caused by outdated cached images
+
+This is especially important in development environments where container configurations might change frequently.
+
+### 6. Benefits of the Dual Setup
 
 - **Flexibility**: Choose between VS Code's integrated workflow or command-line management
 - **Convenience**: Use shorter commands for common operations

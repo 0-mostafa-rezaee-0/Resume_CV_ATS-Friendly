@@ -26,7 +26,7 @@ Getting started with this LaTeX resume environment is simple:
    cd Resume_CV_ATS-Friendly
    
    # Start the container
-   docker-compose up -d  # or use alias: dcu
+   docker-compose up -d --build  # or use alias: dcu
    ```
 
 3. **Edit in Cursor/VS Code**:
