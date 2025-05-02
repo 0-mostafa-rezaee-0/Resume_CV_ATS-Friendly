@@ -11,36 +11,48 @@ This will create your own copy of this project, which you can modify freely — 
 <h1 align="center">ATS-Friendly Resume Formatting Best Practices</h1>
 
 
+This repository is based on a LaTeX Docker container which is very easy to use even for people without Docker knowledge. The only thing you need is to install Docker Desktop, which is super easy and straightforward. This approach eliminates all the headaches of setting up a LaTeX environment locally while providing a full-featured system that works perfectly across all operating systems. A major advantage over Overleaf is that you can use GitHub Copilot in VS Code or Cursor here, which significantly enhances productivity when working with LaTeX.
+
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions.
 
 ## ⚡ Quick Start
 
 Getting started with this LaTeX resume environment is simple:
 
-1. **Prerequisites**: Install [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Cursor](https://cursor.sh/) or VS Code
+1. **Prerequisites**: Install [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Cursor](https://cursor.sh/) or VS Code with Dev Containers extension
 
-2. **Start Container**:
+2. **Clone Repository**:
    ```bash
    # Clone this repository 
    git clone <repository-url>
    cd Resume_CV_ATS-Friendly
-   
-   # Start the container
-   docker-compose up -d --build  # or use alias: dcu
    ```
 
-3. **Edit in Cursor/VS Code**:
-   - Open the project in Cursor/VS Code
-   - Select "Reopen in Container" when prompted
-   - Navigate to LaTeX directory and edit .tex files
+3. **Open in Editor**:
+   - Open with Cursor: `cursor .` 
+   - Open with VS Code: `code .`
+   - Or use the editor's GUI to open the folder
 
-4. **Shutdown**:
+4. **Start Container (Two Methods)**:
+   
+   **Method 1 - Using Dev Containers (Recommended):**
+   - If prompted, select "Reopen in Container"
+   - If not prompted, press `Ctrl+Shift+P` then select "Dev Containers: Rebuild and Reopen in Container"
+   - **Shutdown**: Simply close the editor window when finished - it will automatically handle stopping the container
+   
+   **Method 2 - Using Docker Compose:**
    ```bash
+   # Start the container from the terminal
+   docker-compose up -d --build  # or use alias: dcu
+   
    # When finished, shut down the container
    docker-compose down  # or use alias: dcd
    ```
 
-For detailed instructions, see the [Docker Compose Tutorial](docs/docker-compose-tutorial.md).
+5. **Edit LaTeX Files**:
+   - Navigate to LaTeX directory and edit .tex files
+   - Changes are automatically saved to your local workspace
+   - Use Copilot and other extensions to enhance your LaTeX writing
 
 ***Table of Contents***
 
@@ -103,8 +115,6 @@ For detailed instructions, see the [Docker Compose Tutorial](docs/docker-compose
   &nbsp;&nbsp;&nbsp;&nbsp;<a href="#6-contact-information"><i><b>6. Contact Information</b></i></a>
 </div>
 &nbsp;
-
-This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions. It combines LaTeX technical knowledge with strategic content optimization to help you craft resumes that stand out to both automated screening systems and human reviewers.
 
 ## 1.1. Who Is This Tutorial For?
 
