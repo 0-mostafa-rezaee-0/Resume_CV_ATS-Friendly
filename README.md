@@ -102,7 +102,7 @@ Getting started with this LaTeX resume environment is simple:
 <details>
   <summary><a href="#5-resume-font-guide"><i><b>5. Resume Font Guide</b></i></a></summary>
   <div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#51-why-inter--montserrat">5.1. Why Inter + Montserrat?</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#51-font-compatibility-latex-engine-considerations">5.1. Font Compatibility: LaTeX Engine Considerations</a><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#52-fonts-to-avoid-and-why">5.2. Fonts to Avoid (and Why)</a><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#53-modern-fonts-for-tech--startups">5.3. Modern Fonts for Tech & Startups</a><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#54-classic--safe-fonts-traditional-roles">5.4. Classic & Safe Fonts (Traditional Roles)</a><br>
@@ -498,17 +498,36 @@ A resume's typography does more than look pretty—it determines whether your do
 
 ---
 
-## 5.1 Why Inter + Montserrat?  
+## 5.1 Font Compatibility: LaTeX Engine Considerations
 
-- **Modern, open-source, ATS-safe**: both use standard Latin glyphs, so parsers read them like any system font.  
-- **Optimised for screens and print**: Inter's high x-height aids long-form legibility; Montserrat's geometric forms give headers punch.  
+> **IMPORTANT ATS COMPATIBILITY NOTE**
+>
+> There is an important technical consideration when choosing fonts and LaTeX engines for resumes:
+>
+> - **XeLaTeX/LuaLaTeX** allows using modern fonts like Inter and Montserrat, but PDFs generated this way may have **reduced ATS compatibility** due to how fonts are embedded.
+> - **pdfLaTeX** with standard fonts produces more ATS-friendly documents that parsing systems can reliably extract text from.
+>
+> **For maximum ATS compatibility**, use pdfLaTeX with standard fonts (Helvetica, Arial, Times New Roman).
+>
+> **For visually superior resumes** where you control the submission process (direct email) or for printed copies, XeLaTeX with modern fonts is preferable.
+
+### Original Font Recommendations (For Visual Appeal)
+
+When ATS compatibility is not your primary concern (e.g., networking, direct submissions):
+
+- **Modern, open-source fonts**: Inter and Montserrat use standard Latin glyphs with excellent screen and print rendering.
 - **Free via Google Fonts**:  
   - [Inter](https://fonts.google.com/specimen/Inter) (variable font, lighter file size)  
   - [Montserrat](https://fonts.google.com/specimen/Montserrat)  
-- **Installation caveat**: not bundled with MS Office.  
-  - For **.docx**, embed fonts (*File → Options → Save → "Embed fonts"*).  
-  - If a posting allows **PDF**, export with fonts embedded to guarantee fidelity.  
 - **Usage rule**: Inter for **body**, Montserrat Bold for **headings only**.
+
+### ATS-Safe Recommendations (For Job Applications)
+
+When submitting through ATS systems, use these safer alternatives:
+
+- **Body text**: Arial, Helvetica, or Calibri (11pt)
+- **Section headings**: Same font as body, but bold (14pt)
+- **LaTeX engine**: pdfLaTeX (not XeLaTeX or LuaLaTeX)
 
 ---
 
@@ -517,59 +536,61 @@ A resume's typography does more than look pretty—it determines whether your do
 - **Comic Sans / Papyrus** – Unprofessional; credibility killer.  
 - **Display or script faces** – Contain non-standard ligatures that can scramble ATS parsing.  
 - **Icon/Web fonts** (e.g., Font Awesome) – ATS cannot read icons; vital info disappears.  
-- **Times New Roman** – Perfectly legible but signals a dated aesthetic; reserve for ultra-traditional fields (law, academia) only.  
+- **Custom or uncommon fonts** – May not be properly extracted by ATS systems, causing parsing failures.
 
 ---
 
-## 5.3 Modern Fonts for Tech & Start-ups  
+## 5.3 Modern Fonts for Tech & Start-ups (Visual Appeal Focus)  
 
-| Font                | Style      | Best Use & Rationale                                        |
-|---------------------|------------|-------------------------------------------------------------|
-| **Inter**           | Sans-serif | Primary body font; variable weights, excellent digital legibility |
-| **Roboto**          | Sans-serif | Alternative body font; familiar to Android & Google users   |
-| **Lato**            | Sans-serif | Friendly tone; ideal for sub-headings                       |
-| **Montserrat**      | Sans-serif | **Headers only** – wide letterforms make section titles pop |
-| **Source Sans Pro** | Sans-serif | Adobe-designed fallback if Inter isn't available            |
+| Font                | Style      | Best Use & Rationale                                        | ATS Compatibility |
+|---------------------|------------|-----------------------------------------------------------|-------------------|
+| **Inter**           | Sans-serif | Primary body font; variable weights, excellent digital legibility | Moderate (requires XeLaTeX) |
+| **Roboto**          | Sans-serif | Alternative body font; familiar to Android & Google users   | Moderate (requires XeLaTeX) |
+| **Lato**            | Sans-serif | Friendly tone; ideal for sub-headings                       | Moderate (requires XeLaTeX) |
+| **Montserrat**      | Sans-serif | **Headers only** – wide letterforms make section titles pop | Moderate (requires XeLaTeX) |
+| **Source Sans Pro** | Sans-serif | Adobe-designed fallback if Inter isn't available            | Moderate (requires XeLaTeX) |
 
 **Layout tips (digital-first résumé):**  
 - Body: **Inter or Roboto 10.5–11 pt**  
 - Headings: **Montserrat Bold 14–16 pt**  
 - Line spacing: **1.25–1.5**  
 - Margins: **0.65–0.75 in**  
-- Always **embed** fonts or attach as PDF if allowed.
+- Consider ATS compatibility when choosing submission format.
 
 ---
 
-## 5.4 Classic & Safe Fonts (Traditional Roles)  
+## 5.4 ATS-Safe Fonts (High Compatibility)  
 
-| Font         | Style      | Why Use It                                       |
-|--------------|------------|--------------------------------------------------|
-| **Calibri**  | Sans-serif | MS Office default; clean and ATS-safe            |
-| **Cambria**  | Serif      | Designed for on-screen reading; looks crisp in print |
-| **Georgia**  | Serif      | Elegant yet legible at small sizes               |
-| **Garamond** | Serif      | Traditional academic CVs; use ≥ 11 pt            |
-| **Helvetica**| Sans-serif | Timeless, but may need licensing on Windows      |
+| Font         | Style      | Why Use It                                       | ATS Compatibility |
+|--------------|------------|--------------------------------------------------|-------------------|
+| **Calibri**  | Sans-serif | MS Office default; clean and ATS-safe            | Excellent (pdfLaTeX) |
+| **Arial**    | Sans-serif | Universally recognized and highly readable        | Excellent (pdfLaTeX) |
+| **Helvetica**| Sans-serif | Timeless, excellent parsability                   | Excellent (pdfLaTeX) |
+| **Georgia**  | Serif      | Elegant yet legible at small sizes               | Very Good (pdfLaTeX) |
+| **Times New Roman** | Serif | Maximum compatibility with all systems          | Excellent (pdfLaTeX) |
 
 **Guidelines:**  
 - Limit yourself to **one body font** plus **one heading font**.  
 - Body size **10–12 pt**; headings **12–14 pt** for serif, **14–16 pt** for sans-serif.  
-- Shun any font that swaps letters for glyphs or advanced ligatures.
+- Use pdfLaTeX for generating documents that will be submitted through ATS systems.
+- Avoid any font that swaps letters for glyphs or uses advanced ligatures.
 
 ---
 
 ## 5.5. Definitive Resume Typography & Layout Rules (2025)
 
-Follow every point exactly—no substitutes, no alternatives.
+For maximum ATS compatibility with good visual design:
 
 1. **Fonts & Sizes**  
-   * **Body text:** **Inter 11 pt**  
-   * **Section headings:** **Montserrat Bold 14 – 16 pt**  
-   * Rationale: Both fonts are Google-hosted, screen-optimized, and confirmed ATS-compatible. :contentReference[oaicite:0]{index=0}  
+   * **Body text:** **Arial or Helvetica 11 pt**  
+   * **Section headings:** **Same font, Bold, 14 pt**  
+   * **LaTeX engine:** pdfLaTeX (not XeLaTeX/LuaLaTeX)
+   * Rationale: These fonts are universally recognized by ATS systems.
 
 2. **File Format**  
-   * Save as **.docx**.  
-   * In Word: *File → Options → Save → "Embed fonts in the file"*.  
-   * Export to PDF **only** if the job post demands it. :contentReference[oaicite:1]{index=1}  
+   * Generate with **pdfLaTeX** for best text extraction.
+   * Submit as **.pdf** unless the job post specifically requests .docx.
+   * If using Word: *File → Options → Save → "Embed fonts in the file"*.
 
 3. **Layout**  
    * **Single column**, fully **left-aligned**.  
@@ -593,16 +614,16 @@ Follow every point exactly—no substitutes, no alternatives.
    * List acronyms once with the long form: "Natural Language Processing (**NLP**).".
 
 7. **File Naming Convention**  
-   * `Lastname_Firstname_TargetRole.docx`  
-     *Example:* `Rezaee_Mostafa_ML_Engineer.docx`
+   * `Lastname_Firstname_TargetRole.pdf`  
+     *Example:* `Rezaee_Mostafa_ML_Engineer.pdf`
 
 8. **Final QA Checklist (60 seconds)**  
-   1. Open in **Notepad**—all text should appear in the correct order.  
+   1. Open in **Adobe Reader** and try to select/copy text—all text should be selectable.
    2. Run a quick scan with Jobscan or Resume Worded; fix any missing keywords.  
-   3. Confirm file size ≤ 500 KB (embedded fonts increase size slightly).  
-   4. Re-save; do **not** alter styling after embedding fonts.
+   3. Confirm file size ≤ 500 KB.
+   4. Test PDF text extraction with a free online PDF-to-text converter to simulate ATS parsing.
 
-Apply these eight rules verbatim and your résumé will render identically on any recruiter's screen, remain perfectly parsable by every major Applicant Tracking System, and present a crisp, modern aesthetic suited to tech or start-up roles.
+Apply these eight rules verbatim and your résumé will render identically on any recruiter's screen, remain perfectly parsable by every major Applicant Tracking System, and present a crisp, professional aesthetic suited to tech or start-up roles.
 
 
 # 6. Contact Information
