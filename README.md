@@ -487,6 +487,7 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 
 - [GitHub Search: Popular LaTeX Resumes](https://github.com/search?q=stars%3A%3E10+forks%3A%3E10+language%3ATeX+resume&type=repositories&ref=advsearch&s=stars&o=desc)
 - [rover-resume](https://github.com/subidit/rover-resume)
+- [Overleaf Rover Resume Template](https://www.overleaf.com/latex/templates/rover-resume/bpzqtssvfgsn)
 
 <div align="center">
     <img src="images/base-rover.jpg" alt="base-rover" width="50%">
