@@ -477,11 +477,28 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 
 ## 3.9. Quick Self-Check Before Submitting  
 
-1. **Open the file in a plain-text editor** (e.g., Notepad). If everything is legible and in the right order, an ATS can read it.  
+1. **Test PDF Text Extraction**:
+   - Open the compiled PDF
+   - Select all text (Ctrl+A)
+   - Copy and paste into a .txt file or plain editor
+   - If everything pastes cleanly and in the right order, including your contact info and job history → you're likely safe
+   - If text appears garbled, out of order, or some parts don't paste at all → not ATS-friendly
+
+   Here are examples of ATS-friendly and non-ATS-friendly resumes when pasted into Notepad:
+
+   <div align="center">
+       <img src="images/base-rover-on-notepad.jpg" alt="ATS-friendly resume in Notepad" width="50%">
+       <p><i>ATS-friendly resume pasted into Notepad - text is clean and properly formatted</i></p>
+   </div>
+
+   <div align="center">
+       <img src="images/fancy-rover-on-notepad.jpg" alt="Non-ATS-friendly resume in Notepad" width="50%">
+       <p><i>Non-ATS-friendly resume pasted into Notepad - text is garbled and unreadable</i></p>
+   </div>
+
 2. **Run a test scan** using one of the tools above.  
 3. **Verify keyword density** is natural—aim for ~2 % of total words.  
 4. **Confirm file name & format** follow the job posting instructions.  
-
 
 # 4. Best Examples
 
