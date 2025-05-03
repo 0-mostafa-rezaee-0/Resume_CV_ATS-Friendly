@@ -8,20 +8,27 @@
 % Mix and match as desired. Be consistent with headers and sub-headers.
 %------------------------
 
-\documentclass[11pt]{article} % font size 10pt/11pt/12pt
+\documentclass[11pt]{article} % font size 11pt as per guideline
 
-\usepackage[margin=0.5in, a4paper]{geometry}
+\usepackage[margin=0.65in, a4paper]{geometry} % Margin 0.65in as per guidelines
 \setcounter{secnumdepth}{0} % remove section numbering
 \usepackage{titlesec}
 \titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+% Uses Computer Modern (default LaTeX font)
+\usepackage[T1]{fontenc}
+
 \titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsection}{\large\bfseries}
 \titleformat*{\subsubsection}{\large\itshape}
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep,left=0pt .. \parindent}
 \pagestyle{empty} % remove page number
-\pdfgentounicode=1
+\linespread{1.3} % Set line spacing to 1.3 as recommended
 
+% Add 6pt space after paragraphs as per guidelines
+\parskip=6pt
 
 \begin{document}
 
