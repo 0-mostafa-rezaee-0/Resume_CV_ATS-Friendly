@@ -167,36 +167,26 @@ Folder PATH listing
 │       docker-compose.yml                         <-- Docker compose configuration
 │       README.md                                  <-- Dev container documentation
 │
-+---build                                          <-- Build artifacts directory
++---ATS-Friendly-Templates                         <-- ATS-friendly resume templates
+│       base-rover.pdf                             <-- Base rover resume PDF
+│       base-rover.tex                             <-- Base rover resume LaTeX source
+│       fancy-rover-resume.pdf                     <-- Fancy rover resume PDF
+│       fancy-rover-resume.tex                     <-- Fancy rover resume LaTeX source
+│       README.md                                  <-- Templates documentation
 │
-+---fonts                                          <-- Resume fonts
-│       Inter-VariableFont_opsz,wght.ttf           <-- Inter font file
-│       Inter-Italic-VariableFont_opsz,wght.ttf    <-- Inter italic font file
-│       Montserrat-VariableFont_wght.ttf           <-- Montserrat font file
-│       Montserrat-Italic-VariableFont_wght.ttf    <-- Montserrat italic font file
-│       Inter.zip                                  <-- Inter font package
-│       Inter,Montserrat.zip                       <-- Combined font package
-│       README.md                                  <-- Fonts overview
++---docs                                           <-- Documentation files
+│       docker-compose-guide.md                    <-- Docker compose guide
+│       README.md                                  <-- Documentation overview
 │
 +---images                                         <-- Image resources
 │       base-rover.jpg                             <-- Example image
 │       README.md                                  <-- Images documentation
 │
-+---LaTex                                          <-- LaTeX resume versions
-│   +---example-1                                  <-- Example resume 1
-│   +---example_resume                             <-- Example resume template
-│   +---Mostafa_ats_optimized                      <-- ATS optimized resume
-│   +---Mostafa_Resume-1                           <-- Resume version 1
-│   +---Mostafa_Resume-2                           <-- Resume version 2
-│   +---Mostafa_Resume-3                           <-- Resume version 3
-│   +---Mostafa_Resume-4                           <-- Resume version 4
-│   +---resume                                     <-- Basic resume template
++---personal-resumes                               <-- Personal resume examples
+│   +---Archive                                    <-- Archived resume versions
+│   +---Mostafa_base-rover                         <-- Mostafa's base rover resume
 │   │
-│       README.md                                  <-- LaTeX directory overview
-│
-+---PDF                                            <-- PDF examples
-│       CV_JJalali.pdf                             <-- Example PDF resume
-│       README.md                                  <-- PDF directory documentation
+│       README.md                                  <-- Personal resumes overview
 │
 │   .gitignore                                     <-- Git exclusions
 │   docker-compose.yml                             <-- Root Docker compose file (for quick dcu/dcd)
@@ -255,37 +245,7 @@ Our repository uses the `texlive/texlive` Docker image (`texlive/texlive:latest`
 | **Regular Maintenance** | Actively maintained with updates |
 | **Avoid Alpine Issues** | Prevents common Alpine Linux compatibility problems with LaTeX |
 
-### 2.2.2. How to Use the Docker Image
-
-1. **Prerequisites:**
-   - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-   - Install [Cursor](https://cursor.sh/) IDE
-   - Install the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
-
-2. **Getting Started:**
-   - Start Docker Desktop and ensure it's running
-   - Clone this repository
-   - Navigate to the repository directory in your terminal
-   - Run `docker-compose up -d` to start the container (or `docker-compose -f .devcontainer/docker-compose.yml up -d` if using the dev container version)
-   - Open the project in Cursor
-   - When prompted, select `Reopen in Container` (or use the Command Palette: `Ctrl+Shift+P` or `Cmd+Shift+P` → `Dev Containers: Rebuild and Reopen in Container`)
-   - The container will build automatically with all LaTeX packages installed
-
-3. **Quick Commands:**
-   - Start container: `docker-compose up -d` (or use alias `dcu`)
-   - Stop container: `docker-compose down` (or use alias `dcd`) 
-   - Check container status: `docker-compose ps`
-   - See the [Docker Compose Tutorial](docs/docker-compose-tutorial.md) for details on our dual docker-compose setup
-
-4. **Using the Environment:**
-   - Edit .tex files directly in Cursor
-   - Save to trigger automatic compilation (configured in LaTeX Workshop)
-   - View the PDF in the built-in tab viewer
-   - Use Cursor AI (`Ctrl+K` or `Cmd+K`) for LaTeX assistance
-
-This approach removes all the headaches of local LaTeX installation while providing a full-featured environment that works perfectly with AI assistance.
-
-### 2.2.3. Technical Details
+### 2.2.2. Technical Details
 
 Our container setup includes:
 
@@ -305,7 +265,7 @@ The container is configured to:
 
 You can see the full configuration in the `.devcontainer/devcontainer.json` file.
 
-### 2.2.4. Image Size and Performance Considerations
+### 2.2.3. Image Size and Performance Considerations
 
 The Docker image (`texlive/texlive:latest`) is large due to the comprehensive nature of the full TeX Live distribution:
 
