@@ -12,10 +12,10 @@
 \usepackage{geometry}
 \geometry{
 a4paper,
-top=1.8cm,
-bottom=1in,
-left=2.5cm,
-right=2.5cm
+top=0.5in,
+bottom=0.5in,
+left=0.5in,
+right=0.5in
 }
 
 \setcounter{secnumdepth}{0} % remove section numbering
@@ -73,79 +73,125 @@ right=2.5cm
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}	
 \fancyhf{}							
-\cfoot{\color{darkgray} Rover R\'esum\'e -- Page \thepage{} of \totalpages}
+% \cfoot{\color{darkgray} Rover R\'esum\'e -- Page \thepage{} of \totalpages}
 
 
 \begin{document}
 
-%== HEADER ==%
+% % === Header ======================================================================================
+% \begin{center}
+%     {\fontsize{36}{36}\selectfont\interthin Mostafa\interheavy Rezaee} \\ \bigskip
+%     {\color{icnclr}\faEnvelope[regular]} \href{mailto:hi@example.com}{fancy@rover.com} $|$ 
+%     {\color{icnclr}\faIcon{mobile-alt}} \href{tel:1234567890}{123 456 7890} $|$
+%     {\color{icnclr}\faLinkedinIn} \href{https://www.linkedin.com/in/mostafa-rezaee/}{linkedin.com/in/mostafa-rezaee/}
+%     {\color{icnclr}\fagithub} \href{https://github.com/0-mostafa-rezaee-0}{github.com/0-mostafa-rezaee-0}
+% \end{center}
+
+% === Header ======================================================================================
 \begin{center}
-    {\fontsize{36}{36}\selectfont\interthin FANCY\interheavy ROVER} \\ \bigskip
-    {\color{icnclr}\faEnvelope[regular]} \href{mailto:hi@example.com}{fancy@rover.com} $|$ 
-    {\color{icnclr}\faIcon{mobile-alt}} \href{tel:1234567890}{123 456 7890} $|$
-    {\color{icnclr}\faLinkedinIn} \href{https://www.linkedin.com/}{linkedin.com/in/fancy\_rover}
+	\begin{minipage}{0.45\textwidth}
+		{\Huge\bfseries
+			Mostafa Rezaee  % Name Here
+		} \\ \medskip
+		Ph.D. in Data Science \\ % Title [optional]
+		Data Scientist $|$ ML Engineer $|$ AI Scientist 
+	\end{minipage} \hfill
+	\begin{minipage}{0.48\textwidth}
+		%\raggedleft
+		GitHub: github.com/0-mostafa-rezaee-0 \\
+		LinkedIn: linkedin.com/in/mostafa-rezaee/ \\
+		Email: mostafa.mohammadrezaee@gmail.com \\
+		Mobile: 4193157481
+	\end{minipage}
 \end{center}
 
-\section{Education}
-%==============
-\subsection{University of Location $|$ {\normalfont\textit{Master of PG Degree}} \hfill 2024}
-\begin{itemize}
-    \item Cumulative GPA: 3.98
-    \item Related Coursework: Intro to Programming with Python, Database Administration
-    \item Rover Resume Award
+% === Summary =====================================================================================
+\section{Summary}
+%=================
+\begin{itemize}[itemsep=5pt]
+	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
+	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
+	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
+	\item \textbf{Publications:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder   
+	\item \textbf{GitHub:} Curated and maintained an extensive portfolio of repositories demonstrating technical expertise and open-source contributions across diverse domains, including LLMs, AI Engineering, ML Engineering, Recommender Systems, Causal Inference, A/B Testing, Physics \& Engineering, and Personal Branding.
 \end{itemize}
 
-\subsection{Graduation College \hfill City, State}
-\subsubsection{Degree Name (B.S.) \hfill Year}
-\begin{itemize}
-    \item GPA: 3.4 (Mention if good)
-    \item Related Coursework (list of relavent classes to the job)
-    \item Dean's Award (list any awards or achivements)
-\end{itemize}
-
+% === Experience ==================================================================================
 \section{Experience}
 %===================
-\subsection{Amazon \hfill Feb 2008 -- Present}
-\subsubsection{Prime Member \hfill City, State}
-\begin{itemize}
-    \item Increased order volume by 823\% over 7 years 
-    \item Researched diverse product catalog, spanning departments from Simplehuman bag liners to cat food. 
-    \item Regularly reported on product quality using review portal.
+\subsection{Machine Learning Engineer}
+\subsubsection{Stealth Startup \hfill May 2024 - Present}
+\begin{itemize}[itemsep=5pt]
+	\item Deployed scalable ML models as REST APIs using FastAPI and Docker, integrating PostgreSQL for persistent prediction storage.
+	\item Implemented real-time monitoring with Prometheus and Grafana, tracking API performance, model predictions, and system health. 
+	\item Automated ML workflows with CI/CD pipelines, enabling seamless model updates, containerized deployments, and continuous integration using GitHub Actions.
 \end{itemize}
 
-\subsection{Organization \hfill City, State}
-\subsubsection{Position Title \hfill Month Year - Month Year}
-\begin{itemize}
-    \item XYZ method - Accomplished [X] as measured by [Y], by doing [Z].
-    \item CAR method - Context, Action, Result. STAR method - Situation, Task, Action, Result.
-    \item Begin each line with an action verb and include details that will help the reader understand your accomplishments, skills, knowledge, abilities, or achievements.
-    \item Quantify where possible.
+\subsection{Data Scientist}
+\subsubsection{SaveBirds \hfill Sep 2019 - Apr 2024}
+\begin{itemize}[itemsep=5pt]
+	\item 99\% reduction in data preparation and analysis time—cutting it from 90 days to just 1 minute—by developing the SaveBirds.app, enabling ecologists and conservationists without coding skills to access 56 years of 800 bird species from 300,000 locations across North America.
+	\item 99\% reduction in atlas creation time—cutting it from 180 days to under 10 hours—by creating the Bird Atlas Generator (BAG), making it accessible without advanced GIS expertise.
+	\item Automated key biodiversity metrics calculation enabling rapid, data-driven conservation decisions for 40,000 Protected Areas and supporting the \$75 billion wildlife-watching industry.
+	\item Supported 7 projects involving 10 researchers from 6 institutions.
 \end{itemize}
 
+\subsection{AI Scientist}
+\subsubsection{Sanofi \hfill Jun 2022 - Aug 2022}
+\begin{itemize}[itemsep=5pt]
+	\item Boosted Gait Speed Accuracy: Improved prediction accuracy from 70\% to 88\% (a 26\% relative improvement) using LSTM networks on accelerometer data.
+	\item Refined Step Segmentation: Improved classification accuracy from 86\% to 94\% reducing error rates from 14\% to 6\% (a 57\% relative improvement) through Random Forest, SVM, and advanced signal processing techniques.
+	\item Reduced Drift in Step Length Calculation: Enhanced stride length estimation accuracy from 75\% to 97\% (a 29\% relative improvement) and reduced measurement error from 6.5 cm to 5.1 cm using advanced Kalman filtering techniques.
+	\item Minimized False Positives in Sway Detection: Improved accuracy in detecting sway from 65\% to 95\% (a 46\% relative improvement) and reduced false alarms from 22\% to 15\% using Bayesian filtering, adaptive thresholding, and time-series anomaly detection algorithms.
+	\item Optimized Data Pipeline: Accelerated preprocessing of 1.2 million accelerometer data points, reducing processing time from 9.2s to 5.1s (a 45\% relative improvement) by implementing Apache Spark and advanced feature engineering techniques.
+\end{itemize}
+
+\subsection{Lead Data Scientist \& Deputy Director of Research and Technology}
+\subsubsection{Farabi Institute \hfill Sep 2013 - Aug 2019}
+\begin{itemize}[itemsep=5pt]
+	\item Led the provincial implementation of a nationwide data digitization project, transforming the educational ecosystem for over 1,000,000 students, 40,000 classrooms, and 76,000 teachers across 40 districts.
+	\item Supervised a team of 100+ data analysts directly reporting to me, ensuring standardized, high-quality data collection and analysis at scale. 
+	\item Enhanced data accuracy by 40\% and established real-time updates, allowing instant visibility into changes in student, teacher, and school profiles.
+	\item Applied advanced regression, classification, and time series analyses to derive actionable insights, guiding data-driven policy decisions for senior authorities.
+	\item Developed an automated alert system that identified significant performance shifts, prompting timely interventions and continuous improvement throughout the education system.
+\end{itemize}
+
+\subsection{Adjunct Professor of Machine Learning and Computational Studies}
+\subsubsection{Payame Noor University (PNU) \hfill Sep 2013 - Aug 2019}
+\begin{itemize}[itemsep=5pt]
+	\item Empowered 600+ students over six years by teaching a 3-credit Computer Programming course each semester, covering Python and Machine Learning to 50+ senior and master's students per class.
+	\item Supervised 100+ senior students' final projects, designing specialized Machine Learning projects that laid the foundation for their master's research and careers in AI.
+	\item Shaped the future of AI professionals by inspiring students to integrate Machine Learning into their master's projects, fostering a new generation of ML practitioners and researchers.
+\end{itemize} 
+
+% === Education ===================================================================================
+\section{Education}
+%==================
+\subsection{Data Science, Ph.D. $|$ {\normalfont\itshape Bowling Green State University, Ohio. } \hfill 2024} 
+% \begin{itemize}
+% 	\item Dissertation: Democratizing Breeding Bird Survey Data Using Data Science 
+% \end{itemize}
+\vspace{1em}
+
+% === Skills ======================================================================================
 \section{Skills}
 %===============
-\begin{description}
-    \item[Technical] List computer software and programming languages 
-    \item[Language] List foreign languages and your level of fluency
-    \item[Laboratory] List scientific / research lab techniques or tools [If Applicable]
-    \item[Interests] List activities you enjoy that may spark interview conversation
+\begin{description}[itemsep=0pt]
+	\item[Data Science] A/B Testing, Causal Inference, Recommender Systems
+	\item[LLMs \& Generative AI] Transformers, RAG, LangChain, OpenAI, Claude, Prompt Engineering, Ray	
+	\item[AI Engineering] FastAPI, Streamlit, Gradio, HuggingFace, ONNX Runtime, Triton, W\&B 
+	\item[ML Engineering] Docker, Kubernetes, MLflow, Kubeflow, Apache Airflow, SageMaker
+	\item[Deep Learning] Computer Vision, Natural Language Processing (NLP), HuggingFace, PyTorch, TensorFlow
+	\item[Machine Learning] scikit-learn, caret, XGBoost, LightGBM, Random Forest
+	\item[Programming Languages] Python, SQL, R, C++, FORTRAN
+	\item[Statistics] Hypothesis Testing, Bayesian Methods, Experimental Design, Probability Theory
+	\item[Database] PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch
+	\item[DevOps/MLOps] CI/CD Pipelines, GitHub Actions, Jenkins, Monitoring (Prometheus, Grafana)
+	\item[Cloud Platforms] AWS, Azure, Google Cloud
+	\item[Time Series Analysis] Transformers, TCN, Prophet, LSTM, Statsmodels, ARIMA, SARIMA, TSA
+	\item[Big Data] Apache Spark, Hadoop, Apache Hive, Presto, Apache Flink, Dask
+	\item[Software Engineering] Git, Design Patterns, Test-Driven Development, PyTest, Unit Testing
+	\item[Visualization] Matplotlib, Seaborn, Plotly, Tableau, PowerBI
 \end{description}
-
-\section{Projects}
-%=================
-\subsection{Project Name {\normalfont $|$ \href{http://github.com}{\textit{GitHub Link}}} \hfill 2022}
-\begin{itemize}
-    \item Tech used, Language, Frameworks etc.
-    \item Implemented ABC feature
-    \item Optimised XYZ by 50\%
-\end{itemize}
-
-\section{Certification \& Awards}
-%===============================
-\begin{enumerate}[itemsep=0pt]
-  \item [2023] Some programming bootcamp, Location.
-  \item [2022] Forbes Top 15 Procrastinators under 15.
-  \item [2021] Conducted workshop on family planning by abstainance in SomePlace.
-\end{enumerate}
 
 \end{document}
