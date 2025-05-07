@@ -1,5 +1,46 @@
 <h1 align="center">LaTeX Development Environment Setup Guide</h1>
 
+This guide provides comprehensive instructions for setting up and using a containerized LaTeX development environment. It covers both the LaTeX tools configuration and Docker container management for seamless document creation.
+
+---
+
+***Table of Contents***
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#1-overview"><i><b>1. Overview</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#2-prerequisites"><i><b>2. Prerequisites</b></i></a>
+</div>
+&nbsp;
+
+<details>
+  <summary><a href="#3-latex-environment-setup"><i><b>3. LaTeX Environment Setup</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#31-latex-workshop-extension">3.1. LaTeX Workshop Extension</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#32-using-the-latex-environment">3.2. Using the LaTeX Environment</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#33-troubleshooting-latex">3.3. Troubleshooting LaTeX</a><br>
+  </div>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#4-docker-compose-configuration"><i><b>4. Docker Compose Configuration</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#41-understanding-the-dual-docker-compose-setup">4.1. Understanding the Dual Docker Compose Setup</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#42-when-to-use-each-file">4.2. When to Use Each File</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#43-command-reference">4.3. Command Reference</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#44-setting-up-aliases">4.4. Setting Up Aliases</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#45-why-use-the---build-flag">4.5. Why Use the --build Flag</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#46-benefits-of-the-dual-setup">4.6. Benefits of the Dual Setup</a><br>
+  </div>
+</details>
+&nbsp;
+
+---
+
 # 1. Overview
 
 This directory contains the configuration for the LaTeX development container used in this project. The setup includes both LaTeX development tools and Docker container management.
