@@ -1,26 +1,40 @@
-# Resume Examples
+<h1 align="center">ATS-Friendly Resume Templates</h1>
 
-This directory contains example resumes for different industries and career stages, showcasing how to implement ATS optimization strategies in real-world scenarios.
+This directory contains LaTeX resume templates designed to be highly compatible with Applicant Tracking Systems (ATS) while maintaining professional appearance.
 
-## Directory Structure
+## Available Templates
 
-- **tech/** - Examples for software development, data science, and IT roles
-- **startup/** - Examples for roles at startup companies and innovative tech firms
-- **corporate/** - Examples for larger corporate environments and enterprise roles
+- **base-rover** - A clean, minimal template with straightforward formatting
+  - `base-rover.tex` - LaTeX source file
+  - `base-rover.pdf` - Compiled PDF output
 
-## Using These Examples
+- **fancy-rover** - An enhanced template with more stylistic elements while maintaining ATS compatibility
+  - `fancy-rover.tex` - LaTeX source file
+  - `fancy-rover.pdf` - Compiled PDF output
 
-These examples demonstrate:
-- How to properly implement the recommended templates
-- Industry-specific keyword usage
-- Effective formatting techniques for different career levels
-- Custom sections for specific role types
+## Template Features
 
-Feel free to use these as inspiration, but remember to customize any template with your own information and keywords relevant to your target positions.
+These templates demonstrate:
+- ATS-optimized formatting techniques
+- Proper heading structure and hierarchy
+- Clean, readable layouts
+- Example content structure for different resume sections
+- PDF Unicode support for improved ATS parsing
 
-## Contributing Examples
+## Using These Templates
 
-If you'd like to contribute an anonymized example:
-1. Remove all personal identifying information
-2. Include notes about what industry/role it targets
-3. Submit a pull request with your example 
+1. Select the template that best fits your style preference
+2. Edit the .tex file with your personal information
+3. Compile using a LaTeX compiler (e.g., pdfLaTeX)
+4. Customize sections based on your industry and experience level
+
+## Template Source
+
+These templates are based on the Rover Resume project: https://github.com/subidit/rover-resume
+
+## Contributing
+
+If you'd like to contribute additional templates or improvements:
+1. Ensure ATS compatibility is maintained
+2. Include both the .tex source and compiled .pdf
+3. Submit a pull request with your additions 
