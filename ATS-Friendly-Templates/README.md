@@ -5,25 +5,29 @@ This directory contains LaTeX resume templates designed to be highly compatible 
 ## Available Templates
 
 - **base-rover** - A clean, minimal template with straightforward formatting
-  - `base-rover.tex` - LaTeX source file
+  - `base-rover.tex` - LaTeX source file with example content structure
   - `base-rover.pdf` - Compiled PDF output
 
-- **fancy-rover** - An enhanced template with more stylistic elements while maintaining ATS compatibility
-  - `fancy-rover.tex` - LaTeX source file
+- **fancy-rover** - An enhanced template with stylistic elements while maintaining ATS compatibility
+  - `fancy-rover.tex` - LaTeX source file with example content structure
   - `fancy-rover.pdf` - Compiled PDF output
 
 ## Template Features
 
 These templates demonstrate:
-- ATS-optimized formatting techniques
+- ATS-optimized formatting techniques with `\pdfgentounicode=1` for improved parsing
 - Proper heading structure and hierarchy
-- Clean, readable layouts
-- Example content structure for different resume sections
+- Clean, readable layouts with consistent spacing
+- Example content structure with various resume sections (Education, Experience, Skills, Projects)
+- Multiple formatting options (single-line vs. double-line headers)
+- Different list styles for various content types
 - PDF Unicode support for improved ATS parsing
 
 ## Using These Templates
 
-1. Select the template that best fits your style preference
+1. Select the template that best fits your style preference:
+   - **base-rover**: Simple, clean design with black and white color scheme
+   - **fancy-rover**: Enhanced design with custom colors and icons
 2. Edit the .tex file with your personal information
 3. Compile using a LaTeX compiler (e.g., pdfLaTeX)
 4. Customize sections based on your industry and experience level
