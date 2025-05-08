@@ -18,6 +18,17 @@ left=0.5in,
 right=0.5in
 }
 
+% --- Mostafa's Customizations --------------------------------------------------------------------
+\usepackage{hyperref} % for links
+\usepackage{textcomp} % for \textdollar command
+
+% Disable hyphenation and looser line-breaking to prevent overflow
+\usepackage[none]{hyphenat}  % ← Disable hyphenation
+% \sloppy                      % ← Looser line-breaking to prevent overflow
+\emergencystretch=2em % ← Looser line-breaking to prevent overflow
+% ------------------------------------------------------------------------------------------------
+
+
 \setcounter{secnumdepth}{0} % remove section numbering
 \pdfgentounicode=1 % make ATS friendly
 
@@ -78,41 +89,38 @@ right=0.5in
 
 \begin{document}
 
-% % === Header ======================================================================================
-% \begin{center}
-%     {\fontsize{36}{36}\selectfont\interthin Mostafa\interheavy Rezaee} \\ \bigskip
-%     {\color{icnclr}\faEnvelope[regular]} \href{mailto:hi@example.com}{fancy@rover.com} $|$ 
-%     {\color{icnclr}\faIcon{mobile-alt}} \href{tel:1234567890}{123 456 7890} $|$
-%     {\color{icnclr}\faLinkedinIn} \href{https://www.linkedin.com/in/mostafa-rezaee/}{linkedin.com/in/mostafa-rezaee/}
-%     {\color{icnclr}\fagithub} \href{https://github.com/0-mostafa-rezaee-0}{github.com/0-mostafa-rezaee-0}
-% \end{center}
-
 % === Header ======================================================================================
 \begin{center}
-	\begin{minipage}{0.45\textwidth}
+	\begin{minipage}{0.46\textwidth}
 		{\Huge\bfseries
 			Mostafa Rezaee  % Name Here
 		} \\ \medskip
 		Ph.D. in Data Science \\ % Title [optional]
-		Data Scientist $|$ ML Engineer $|$ AI Scientist 
+		% Data Scientist $|$ ML Engineer $|$ AI Scientist 
+		ML Engineer \\
+		Data Scientist \\
+		AI Scientist 
 	\end{minipage} \hfill
-	\begin{minipage}{0.48\textwidth}
-		%\raggedleft
-		GitHub: github.com/0-mostafa-rezaee-0 \\
-		LinkedIn: linkedin.com/in/mostafa-rezaee/ \\
-		Email: mostafa.mohammadrezaee@gmail.com \\
-		Mobile: 4193157481
+	\begin{minipage}{0.53\textwidth}
+		\begin{tabular}{rl}
+			GitHub: & \href{https://github.com/0-mostafa-rezaee-0}{github.com/0-mostafa-rezaee-0} \\
+			LinkedIn: & \href{https://www.linkedin.com/in/mostafa-rezaee/}{linkedin.com/in/mostafa-rezaee/} \\
+			Google Scholar: & \href{https://scholar.google.com/citations?user=jvcCIJYAAAAJ&hl=en}{t.ly/JPyRL} \\
+			Email: & mostam@bgsu.edu \\
+			Mobile: & 4193157481 \\
+			Address: & USA, Open to Relocation
+		\end{tabular}
 	\end{minipage}
 \end{center}
 
 % === Summary =====================================================================================
-\section{Summary}
+\section{Highlights}
 %=================
 \begin{itemize}[itemsep=5pt]
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Publications:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder   
+	\item \textbf{Innovative Data Solutions:} Spearheaded the development of the \href{https://savebirds.app/}{SaveBirds.app}, drastically reducing data preparation and analysis time by 99\%, enabling ecologists to access comprehensive bird species data efficiently.
+	\item \textbf{Leadership in Data Science:} Led a team of over 100 data analysts in a nationwide data digitization project, transforming the educational ecosystem for over a million students and significantly enhancing data accuracy and real-time updates.
+	\item \textbf{Advanced Machine Learning Expertise:} Achieved significant improvements in predictive accuracy and processing efficiency in various projects, including a 26\% improvement in gait speed prediction accuracy and a 45\% reduction in data processing time using advanced ML techniques.
+	\item \textbf{Publications \& Research:} Authored 34 publications, including 12 journal articles and 22 full conference papers, showcasing expertise in computational studies. Led 7 projects, notably the SaveBirds.app, collaborating with 10 researchers from 6 institutions. 
 	\item \textbf{GitHub:} Curated and maintained an extensive portfolio of repositories demonstrating technical expertise and open-source contributions across diverse domains, including LLMs, AI Engineering, ML Engineering, Recommender Systems, Causal Inference, A/B Testing, Physics \& Engineering, and Personal Branding.
 \end{itemize}
 
@@ -120,7 +128,7 @@ right=0.5in
 \section{Experience}
 %===================
 \subsection{Machine Learning Engineer}
-\subsubsection{Stealth Startup \hfill May 2024 - Present}
+\subsubsection{Stealth Startup, San Francisco, California \hfill May 2024 - Present}
 \begin{itemize}[itemsep=5pt]
 	\item Deployed scalable ML models as REST APIs using FastAPI and Docker, integrating PostgreSQL for persistent prediction storage.
 	\item Implemented real-time monitoring with Prometheus and Grafana, tracking API performance, model predictions, and system health. 
@@ -128,16 +136,16 @@ right=0.5in
 \end{itemize}
 
 \subsection{Data Scientist}
-\subsubsection{SaveBirds \hfill Sep 2019 - Apr 2024}
+\subsubsection{SaveBirds, Bowling Green, Ohio \hfill Sep 2019 - Apr 2024}
 \begin{itemize}[itemsep=5pt]
 	\item 99\% reduction in data preparation and analysis time—cutting it from 90 days to just 1 minute—by developing the SaveBirds.app, enabling ecologists and conservationists without coding skills to access 56 years of 800 bird species from 300,000 locations across North America.
 	\item 99\% reduction in atlas creation time—cutting it from 180 days to under 10 hours—by creating the Bird Atlas Generator (BAG), making it accessible without advanced GIS expertise.
-	\item Automated key biodiversity metrics calculation enabling rapid, data-driven conservation decisions for 40,000 Protected Areas and supporting the \$75 billion wildlife-watching industry.
+	\item Automated key biodiversity metrics calculation enabling rapid, data-driven conservation decisions for 40,000 Protected Areas and supporting the \href{https://www.usgs.gov/centers/eesc/science/north-american-breeding-bird-survey#:~:text=common\%20and\%20helping-,fuel\%20a\%20\%2475\%20billion\%20wildlife\%20watching\%20industry,-.}{\textdollar75 billion} wildlife-watching industry.
 	\item Supported 7 projects involving 10 researchers from 6 institutions.
 \end{itemize}
 
 \subsection{AI Scientist}
-\subsubsection{Sanofi \hfill Jun 2022 - Aug 2022}
+\subsubsection{Sanofi, Cambridge, Massachusetts \hfill Jun 2022 - Aug 2022}
 \begin{itemize}[itemsep=5pt]
 	\item Boosted Gait Speed Accuracy: Improved prediction accuracy from 70\% to 88\% (a 26\% relative improvement) using LSTM networks on accelerometer data.
 	\item Refined Step Segmentation: Improved classification accuracy from 86\% to 94\% reducing error rates from 14\% to 6\% (a 57\% relative improvement) through Random Forest, SVM, and advanced signal processing techniques.
@@ -147,7 +155,7 @@ right=0.5in
 \end{itemize}
 
 \subsection{Lead Data Scientist \& Deputy Director of Research and Technology}
-\subsubsection{Farabi Institute \hfill Sep 2013 - Aug 2019}
+\subsubsection{Farabi Institute, Ahvaz, Khuzestan \hfill Sep 2013 - Aug 2019}
 \begin{itemize}[itemsep=5pt]
 	\item Led the provincial implementation of a nationwide data digitization project, transforming the educational ecosystem for over 1,000,000 students, 40,000 classrooms, and 76,000 teachers across 40 districts.
 	\item Supervised a team of 100+ data analysts directly reporting to me, ensuring standardized, high-quality data collection and analysis at scale. 
@@ -157,12 +165,12 @@ right=0.5in
 \end{itemize}
 
 \subsection{Adjunct Professor of Machine Learning and Computational Studies}
-\subsubsection{Payame Noor University (PNU) \hfill Sep 2013 - Aug 2019}
+\subsubsection{Payame Noor University (PNU), Ahvaz, Khuzestan \hfill Sep 2013 - Aug 2019}
 \begin{itemize}[itemsep=5pt]
 	\item Empowered 600+ students over six years by teaching a 3-credit Computer Programming course each semester, covering Python and Machine Learning to 50+ senior and master's students per class.
 	\item Supervised 100+ senior students' final projects, designing specialized Machine Learning projects that laid the foundation for their master's research and careers in AI.
 	\item Shaped the future of AI professionals by inspiring students to integrate Machine Learning into their master's projects, fostering a new generation of ML practitioners and researchers.
-\end{itemize} 
+\end{itemize}
 
 % === Education ===================================================================================
 \section{Education}
@@ -176,6 +184,10 @@ right=0.5in
 % === Skills ======================================================================================
 \section{Skills}
 %===============
+Demonstrates strong analytical, creative, and problem-solving skills. Proficient in communicating complex ideas to diverse audiences. Tech-savvy with a keen ability to stay updated with the latest data programming tools and methodologies.
+
+With a PhD in Data Science, focused on applied mathematics, I merge rigorous theory with production pragmatism. My day-to-day work ranges from deriving bespoke algorithms grounded in calculus and linear algebra to architecting full-stack data analytics pipelines. I excel at integrating heterogeneous data sources, orchestrating ETL processes, and automating model-deployment integration with Docker- and Kubernetes-based CI/CD. Whether I am building probabilistic models, fine-tuning transformer LLMs, or optimizing SQL-based querying strategies, I always select the right statistical and visualization tools—from PyTorch and MLflow to Tableau and Power BI—to deliver insights that drive revenue, not just reports.
+
 \begin{description}[itemsep=0pt]
 	\item[Data Science] A/B Testing, Causal Inference, Recommender Systems
 	\item[LLMs \& Generative AI] Transformers, RAG, LangChain, OpenAI, Claude, Prompt Engineering, Ray	
@@ -195,3 +207,4 @@ right=0.5in
 \end{description}
 
 \end{document}
+
