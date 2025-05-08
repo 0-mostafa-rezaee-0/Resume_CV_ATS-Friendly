@@ -11,6 +11,14 @@
 \documentclass[11pt]{article} % font size 10pt/11pt/12pt
 
 \usepackage[margin=0.5in, a4paper]{geometry}
+
+% ------------------------------------------------------------------------------------------------
+% Disable hyphenation and looser line-breaking to prevent overflow
+\usepackage[none]{hyphenat}  % ← Disable hyphenation
+% \sloppy                      % ← Looser line-breaking to prevent overflow
+\emergencystretch=2em
+% ------------------------------------------------------------------------------------------------
+
 \setcounter{secnumdepth}{0} % remove section numbering
 \usepackage{titlesec}
 \titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
@@ -22,35 +30,79 @@
 \pagestyle{empty} % remove page number
 \pdfgentounicode=1
 
-
 \begin{document}
 
 % === Header ======================================================================================
+% \begin{center}
+% 	\begin{minipage}{0.45\textwidth}
+% 		{\Huge\bfseries
+% 			Mostafa Rezaee  % Name Here
+% 		} \\ \medskip
+% 		Ph.D. in Data Science \\ % Title [optional]
+% 		Data Scientist $|$ ML Engineer $|$ AI Scientist 
+% 	\end{minipage} \hfill
+% 	\begin{minipage}{0.48\textwidth}
+% 		%\raggedleft
+% 		GitHub: github.com/0-mostafa-rezaee-0 \\
+% 		LinkedIn: linkedin.com/in/mostafa-rezaee/ \\
+% 		Google Scholar: t.ly/JPyRL\\
+% 		Email: mostafa.mohammadrezaee@gmail.com \\
+% 		Mobile: 4193157481 \\
+% 		Address: USA, Open to Relocation
+% 	\end{minipage}
+% \end{center}
+
 \begin{center}
 	\begin{minipage}{0.45\textwidth}
 		{\Huge\bfseries
 			Mostafa Rezaee  % Name Here
 		} \\ \medskip
 		Ph.D. in Data Science \\ % Title [optional]
-		Data Scientist $|$ ML Engineer $|$ AI Scientist 
+		% Data Scientist $|$ ML Engineer $|$ AI Scientist 
+		ML Engineer \\
+		Data Scientist \\
+		AI Scientist 
 	\end{minipage} \hfill
 	\begin{minipage}{0.48\textwidth}
-		%\raggedleft
-		GitHub: github.com/0-mostafa-rezaee-0 \\
-		LinkedIn: linkedin.com/in/mostafa-rezaee/ \\
-		Email: mostafa.mohammadrezaee@gmail.com \\
-		Mobile: 4193157481
+		\begin{tabular}{rl}
+			GitHub: & github.com/0-mostafa-rezaee-0 \\
+			LinkedIn: & linkedin.com/in/mostafa-rezaee \\
+			Google Scholar: & t.ly/JPyRL \\
+			Email: & mostam@bgsu.edu \\
+			Mobile: & 4193157481 \\
+			Address: & USA, Open to Relocation
+		\end{tabular}
 	\end{minipage}
 \end{center}
 
+% \begin{center}
+% 	\begin{minipage}{0.45\textwidth}
+% 		{\Huge\bfseries
+% 			Mostafa Rezaee  % Name Here
+% 		} \\ \medskip
+% 		Ph.D. in Data Science \\ % Title [optional]
+% 		Data Scientist $|$ ML Engineer $|$ AI Scientist 
+% 	\end{minipage} \hfill
+% 	\begin{minipage}{0.48\textwidth}
+% 		\begin{tabular}{ll}
+% 			GitHub: & github.com/0-mostafa-rezaee-0 \\
+% 			LinkedIn: & linkedin.com/in/mostafa-rezaee/ \\
+% 			Google Scholar: & t.ly/JPyRL \\
+% 			Email: & mostam@bgsu.edu \\
+% 			Mobile: & 4193157481 \\
+% 			Address: & USA, Open to Relocation
+% 		\end{tabular}
+% 	\end{minipage}
+% \end{center}
+
 % === Summary =====================================================================================
-\section{Summary}
+\section{Highlights}
 %=================
 \begin{itemize}[itemsep=5pt]
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Publications:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder   
+	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
+	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
+	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
+	\item \textbf{Publications \& Research:} Authored 34 publications, including 12 journal articles and 22 full conference papers, showcasing expertise in computational studies. Led 7 projects, notably the SaveBirds.app, collaborating with 10 researchers from 6 institutions. All work involved original modeling and simulation code.
 	\item \textbf{GitHub:} Curated and maintained an extensive portfolio of repositories demonstrating technical expertise and open-source contributions across diverse domains, including LLMs, AI Engineering, ML Engineering, Recommender Systems, Causal Inference, A/B Testing, Physics \& Engineering, and Personal Branding.
 \end{itemize}
 
@@ -114,6 +166,10 @@
 % === Skills ======================================================================================
 \section{Skills}
 %===============
+Demonstrates strong analytical, creative, and problem-solving skills. Proficient in communicating complex ideas to diverse audiences. Tech-savvy with a keen ability to stay updated with the latest data programming tools and methodologies.
+
+With a PhD in Data Science, focused on applied mathematics, I merge rigorous theory with production pragmatism. My day-to-day work ranges from deriving bespoke algorithms grounded in calculus and linear algebra to architecting full-stack data analytics pipelines. I excel at integrating heterogeneous data sources, orchestrating ETL processes, and automating model-deployment integration with Docker- and Kubernetes-based CI/CD. Whether I am building probabilistic models, fine-tuning transformer LLMs, or optimizing SQL-based querying strategies, I always select the right statistical and visualization tools—from PyTorch and MLflow to Tableau and Power BI—to deliver insights that drive revenue, not just reports.
+
 \begin{description}[itemsep=0pt]
 	\item[Data Science] A/B Testing, Causal Inference, Recommender Systems
 	\item[LLMs \& Generative AI] Transformers, RAG, LangChain, OpenAI, Claude, Prompt Engineering, Ray	
