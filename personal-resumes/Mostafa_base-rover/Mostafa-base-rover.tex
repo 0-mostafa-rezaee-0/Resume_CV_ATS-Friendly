@@ -12,11 +12,13 @@
 
 \usepackage[margin=0.5in, a4paper]{geometry}
 
-% ------------------------------------------------------------------------------------------------
+% --- Mostafa's Customizations --------------------------------------------------------------------
+\usepackage{hyperref} % for links
+
 % Disable hyphenation and looser line-breaking to prevent overflow
 \usepackage[none]{hyphenat}  % ← Disable hyphenation
 % \sloppy                      % ← Looser line-breaking to prevent overflow
-\emergencystretch=2em
+\emergencystretch=2em % ← Looser line-breaking to prevent overflow
 % ------------------------------------------------------------------------------------------------
 
 \setcounter{secnumdepth}{0} % remove section numbering
@@ -33,25 +35,6 @@
 \begin{document}
 
 % === Header ======================================================================================
-% \begin{center}
-% 	\begin{minipage}{0.45\textwidth}
-% 		{\Huge\bfseries
-% 			Mostafa Rezaee  % Name Here
-% 		} \\ \medskip
-% 		Ph.D. in Data Science \\ % Title [optional]
-% 		Data Scientist $|$ ML Engineer $|$ AI Scientist 
-% 	\end{minipage} \hfill
-% 	\begin{minipage}{0.48\textwidth}
-% 		%\raggedleft
-% 		GitHub: github.com/0-mostafa-rezaee-0 \\
-% 		LinkedIn: linkedin.com/in/mostafa-rezaee/ \\
-% 		Google Scholar: t.ly/JPyRL\\
-% 		Email: mostafa.mohammadrezaee@gmail.com \\
-% 		Mobile: 4193157481 \\
-% 		Address: USA, Open to Relocation
-% 	\end{minipage}
-% \end{center}
-
 \begin{center}
 	\begin{minipage}{0.45\textwidth}
 		{\Huge\bfseries
@@ -65,9 +48,9 @@
 	\end{minipage} \hfill
 	\begin{minipage}{0.48\textwidth}
 		\begin{tabular}{rl}
-			GitHub: & github.com/0-mostafa-rezaee-0 \\
-			LinkedIn: & linkedin.com/in/mostafa-rezaee \\
-			Google Scholar: & t.ly/JPyRL \\
+			GitHub: & \href{https://github.com/0-mostafa-rezaee-0}{github.com/0-mostafa-rezaee-0} \\
+			LinkedIn: & \href{https://www.linkedin.com/in/mostafa-rezaee/}{linkedin.com/in/mostafa-rezaee/} \\
+			Google Scholar: & \href{https://scholar.google.com/citations?user=jvcCIJYAAAAJ&hl=en}{t.ly/JPyRL} \\
 			Email: & mostam@bgsu.edu \\
 			Mobile: & 4193157481 \\
 			Address: & USA, Open to Relocation
@@ -75,34 +58,14 @@
 	\end{minipage}
 \end{center}
 
-% \begin{center}
-% 	\begin{minipage}{0.45\textwidth}
-% 		{\Huge\bfseries
-% 			Mostafa Rezaee  % Name Here
-% 		} \\ \medskip
-% 		Ph.D. in Data Science \\ % Title [optional]
-% 		Data Scientist $|$ ML Engineer $|$ AI Scientist 
-% 	\end{minipage} \hfill
-% 	\begin{minipage}{0.48\textwidth}
-% 		\begin{tabular}{ll}
-% 			GitHub: & github.com/0-mostafa-rezaee-0 \\
-% 			LinkedIn: & linkedin.com/in/mostafa-rezaee/ \\
-% 			Google Scholar: & t.ly/JPyRL \\
-% 			Email: & mostam@bgsu.edu \\
-% 			Mobile: & 4193157481 \\
-% 			Address: & USA, Open to Relocation
-% 		\end{tabular}
-% 	\end{minipage}
-% \end{center}
-
 % === Summary =====================================================================================
 \section{Highlights}
 %=================
 \begin{itemize}[itemsep=5pt]
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Placeholder:} Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-	\item \textbf{Publications \& Research:} Authored 34 publications, including 12 journal articles and 22 full conference papers, showcasing expertise in computational studies. Led 7 projects, notably the SaveBirds.app, collaborating with 10 researchers from 6 institutions. All work involved original modeling and simulation code.
+	\item \textbf{Innovative Data Solutions:} Spearheaded the development of the \href{https://savebirds.app/}{SaveBirds.app}, drastically reducing data preparation and analysis time by 99\%, enabling ecologists to access comprehensive bird species data efficiently.
+	\item \textbf{Leadership in Data Science:} Led a team of over 100 data analysts in a nationwide data digitization project, transforming the educational ecosystem for over a million students and significantly enhancing data accuracy and real-time updates.
+	\item \textbf{Advanced Machine Learning Expertise:} Achieved significant improvements in predictive accuracy and processing efficiency in various projects, including a 26\% improvement in gait speed prediction accuracy and a 45\% reduction in data processing time using advanced ML techniques.
+	\item \textbf{Publications \& Research:} Authored 34 publications, including 12 journal articles and 22 full conference papers, showcasing expertise in computational studies. Led 7 projects, notably the SaveBirds.app, collaborating with 10 researchers from 6 institutions. 
 	\item \textbf{GitHub:} Curated and maintained an extensive portfolio of repositories demonstrating technical expertise and open-source contributions across diverse domains, including LLMs, AI Engineering, ML Engineering, Recommender Systems, Causal Inference, A/B Testing, Physics \& Engineering, and Personal Branding.
 \end{itemize}
 
