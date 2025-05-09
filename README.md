@@ -99,12 +99,12 @@ Getting started with this LaTeX resume environment is simple:
 &nbsp;
 
 <details>
-  <summary><a href="#5-resume-font-guide"><i><b>5. Resume Font Guide</b></i></a></summary>
+  <summary><a href="#5-resume-font-guide"><i><b>5. Resume Typography and Layout Guide</b></i></a></summary>
   <div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#51-font-compatibility-latex-engine-considerations">5.1. Font Compatibility: LaTeX Engine Considerations</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#51-font-compatibility-with-pdflatex">5.1. Font Compatibility with pdfLaTeX</a><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#52-fonts-to-avoid-and-why">5.2. Fonts to Avoid (and Why)</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#53-modern-fonts-for-tech--startups">5.3. Modern Fonts for Tech & Startups</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#54-classic--safe-fonts-traditional-roles">5.4. Classic & Safe Fonts (Traditional Roles)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#53-pdflatex-compatible-fonts-ats-friendly">5.3. pdfLaTeX-Compatible Fonts (ATS-Friendly)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#54-typography-best-practices-for-ats-compatibility">5.4. Typography Best Practices for ATS Compatibility</a><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#55-definitive-resume-typography--layout-rules-2025">5.5. Definitive Resume Typography & Layout Rules (2025)</a><br>
   </div>
 </details>
@@ -438,6 +438,24 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 - **Keep dates in the same format** (MM/YYYY or YYYY) throughout; inconsistent patterns can scramble timelines.  
 - **Refresh older roles** with 1-line summaries so long careers don't exceed two pages; ATS ranks recent matches higher.  
 - **Condense older positions** (7+ years old) into single-line summaries with just title, company, years, and one key achievement with relevant skills—focus detailed bullets on recent roles that ATS weights more heavily.
+- **Use proper hyperlinks** in digital versions by including the full URL text alongside any hyperlinked text (e.g., "Portfolio: johndoe.com [https://www.johndoe.com]"). Never use URL shorteners as recruiters and hiring managers may ignore or skip them due to uncertainty about their destination.
+
+  > **Note for Rover resume template users:** The basic Rover template doesn't support hyperlinks by default. Add these packages to your preamble, after `\documentclass` and before `\begin{document}`:
+  > ```latex
+  > \usepackage{hyperref} % for links
+  > \usepackage{textcomp} % for \textdollar command
+  > ```
+  > Then you can create links with: `\href{https://www.example.com}{Link Text}`
+
+- **Right-align dates and locations** to create a cleaner, more structured layout that makes your timeline easy to scan.
+
+  > **Note for Rover resume template users:** The basic Rover template doesn't support right-aligned elements by default. Add these packages to your preamble, after `\documentclass` and before `\begin{document}`:
+  > ```latex
+  > % Disable hyphenation and use looser line-breaking to prevent overflow
+  > \usepackage[none]{hyphenat}  % ← Disable hyphenation
+  > \emergencystretch=2em        % ← Looser line-breaking to prevent overflow
+  > ```
+  > This will improve the layout and prevent text overflow issues.
 
 ---
 
@@ -477,40 +495,53 @@ Below are some outstanding examples of LaTeX resumes that demonstrate effective 
     <img src="images/fancy-rover.jpg" alt="fancy-rover" width="50%">
 </div>
 
-## 5. Resume Font Guide  
+## 5. Resume Typography and Layout Guide  
 
-Typography plays a crucial role in creating effective resumes, impacting both human readability and ATS compatibility. The font choices you make can significantly influence how your resume is perceived by recruiters and processed by automated systems. This section provides comprehensive guidance on selecting appropriate fonts, understanding technical considerations, and implementing typography best practices.
+Typography and layout play crucial roles in creating effective resumes, impacting both human readability and ATS compatibility. The design choices you make can significantly influence how your resume is perceived by recruiters and processed by automated systems. This section provides comprehensive guidance on selecting appropriate fonts for pdfLaTeX and implementing typography and layout best practices.
 
-## 5.1 Font Compatibility: LaTeX Engine Considerations
+## 5.1 Font Compatibility with pdfLaTeX
 
 > **IMPORTANT ATS COMPATIBILITY NOTE**
 >
-> There is an important technical consideration when choosing fonts and LaTeX engines for resumes:
+> **pdfLaTeX** is the recommended LaTeX engine for resumes as it produces highly ATS-friendly documents that parsing systems can reliably extract text from.
 >
-> - **XeLaTeX/LuaLaTeX** allows using modern fonts like Inter and Montserrat, but PDFs generated this way may have **reduced ATS compatibility** due to how fonts are embedded.
-> - **pdfLaTeX** with standard fonts produces more ATS-friendly documents that parsing systems can reliably extract text from.
+> **For maximum ATS compatibility**, use pdfLaTeX with standard fonts that are natively supported by this engine.
 >
-> **For maximum ATS compatibility**, use pdfLaTeX with standard fonts (Helvetica, Arial, Times New Roman).
->
-> **For visually superior resumes** where you control the submission process (direct email) or for printed copies, XeLaTeX with modern fonts is preferable.
 
-### Original Font Recommendations (For Visual Appeal)
+### Standard Font Packages for pdfLaTeX
 
-When ATS compatibility is not your primary concern (e.g., networking, direct submissions):
+pdfLaTeX works with several font packages that provide excellent alternatives to the default Computer Modern:
 
-- **Modern, open-source fonts**: Inter and Montserrat use standard Latin glyphs with excellent screen and print rendering.
-- **Free via Google Fonts**:  
-  - [Inter](https://fonts.google.com/specimen/Inter) (variable font, lighter file size)  
-  - [Montserrat](https://fonts.google.com/specimen/Montserrat)  
-- **Usage rule**: Inter for **body**, Montserrat Bold for **headings only**.
+```latex
+% In your preamble (after \documentclass, before \begin{document})
+
+% For Helvetica-like sans-serif
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% For Times Roman-like serif
+\usepackage{mathptmx}
+
+% For Palatino
+\usepackage{palatino}
+
+% For Bookman
+\usepackage{bookman}
+
+% For Charter
+\usepackage{charter}
+
+% For Garamond-like fonts
+\usepackage{ebgaramond}
+```
 
 ### ATS-Safe Recommendations (For Job Applications)
 
-When submitting through ATS systems, use these safer alternatives:
+When submitting through ATS systems, use these safe font choices:
 
-- **Body text**: Arial, Helvetica, or Calibri (11pt)
+- **Body text**: Helvetica, Times Roman, Palatino, or Charter (11pt)
 - **Section headings**: Same font as body, but bold (14pt)
-- **LaTeX engine**: pdfLaTeX (not XeLaTeX or LuaLaTeX)
+- **LaTeX engine**: pdfLaTeX
 
 ---
 
@@ -520,42 +551,48 @@ When submitting through ATS systems, use these safer alternatives:
 - **Display or script faces** – Contain non-standard ligatures that can scramble ATS parsing.  
 - **Icon/Web fonts** (e.g., Font Awesome) – ATS cannot read icons; vital info disappears.  
 - **Custom or uncommon fonts** – May not be properly extracted by ATS systems, causing parsing failures.
+- **Fonts not natively supported by pdfLaTeX** – Require engine switching which can reduce ATS compatibility.
 
 ---
 
-## 5.3 Modern Fonts for Tech & Start-ups (Visual Appeal Focus)  
+## 5.3 pdfLaTeX-Compatible Fonts (ATS-Friendly)
 
-| Font                | Style      | Best Use & Rationale                                        | ATS Compatibility |
-|---------------------|------------|-----------------------------------------------------------|-------------------|
-| **Inter**           | Sans-serif | Primary body font; variable weights, excellent digital legibility | Moderate (requires XeLaTeX) |
-| **Roboto**          | Sans-serif | Alternative body font; familiar to Android & Google users   | Moderate (requires XeLaTeX) |
-| **Lato**            | Sans-serif | Friendly tone; ideal for sub-headings                       | Moderate (requires XeLaTeX) |
-| **Montserrat**      | Sans-serif | **Headers only** – wide letterforms make section titles pop | Moderate (requires XeLaTeX) |
-| **Source Sans Pro** | Sans-serif | Adobe-designed fallback if Inter isn't available            | Moderate (requires XeLaTeX) |
+| Font Package     | Style      | Best Use & Rationale                                        | ATS Compatibility |
+|------------------|------------|-----------------------------------------------------------|-------------------|
+| **helvet**       | Sans-serif | Clean, modern equivalent to Helvetica; excellent for tech roles | Excellent |
+| **mathptmx**     | Serif      | Times Roman equivalent; traditional and highly readable     | Excellent |
+| **palatino**     | Serif      | Elegant with good readability; slightly wider than Times    | Excellent |
+| **charter**      | Serif      | Clean, professional serif with good screen readability      | Excellent |
+| **bookman**      | Serif      | Bold, distinctive serif for traditional industries          | Excellent |
+| **avant**        | Sans-serif | Alternative sans-serif option; good for headings            | Excellent |
 
-**Layout tips (digital-first résumé):**  
-- Body: **Inter or Roboto 10.5–11 pt**  
-- Headings: **Montserrat Bold 14–16 pt**  
-- Line spacing: **1.25–1.5**  
-- Margins: **0.65–0.75 in**  
-- Consider ATS compatibility when choosing submission format.
+**Implementation Example:**
+```latex
+% Modern, clean sans-serif (similar to Helvetica)
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% For better spacing and hyphenation
+\usepackage[none]{hyphenat}  % Disable hyphenation
+\emergencystretch=2em        % Looser line-breaking to prevent overflow
+```
 
 ---
 
-## 5.4 ATS-Safe Fonts (High Compatibility)  
+## 5.4 Typography Best Practices for ATS Compatibility  
 
-| Font         | Style      | Why Use It                                       | ATS Compatibility |
-|--------------|------------|--------------------------------------------------|-------------------|
-| **Calibri**  | Sans-serif | MS Office default; clean and ATS-safe            | Excellent (pdfLaTeX) |
-| **Arial**    | Sans-serif | Universally recognized and highly readable        | Excellent (pdfLaTeX) |
-| **Helvetica**| Sans-serif | Timeless, excellent parsability                   | Excellent (pdfLaTeX) |
-| **Georgia**  | Serif      | Elegant yet legible at small sizes               | Very Good (pdfLaTeX) |
-| **Times New Roman** | Serif | Maximum compatibility with all systems          | Excellent (pdfLaTeX) |
+| Best Practice | Implementation in LaTeX | ATS Benefit |
+|---------------|-------------------------|-------------|
+| **Consistent spacing** | `\setlength{\parskip}{6pt}` | Improves parsing accuracy |
+| **Proper document structure** | Use standard section commands | Helps ATS categorize content |
+| **Simple bullets** | `\usepackage{enumitem}` with basic settings | Ensures list content is correctly extracted |
+| **Left alignment** | Default in most templates | Maintains reading order for parsers |
+| **Clean hyperlinks** | `\usepackage{hyperref}` with visible URLs | Makes contact info accessible |
 
 **Guidelines:**  
 - Limit yourself to **one body font** plus **one heading font**.  
 - Body size **10–12 pt**; headings **12–14 pt** for serif, **14–16 pt** for sans-serif.  
-- Use pdfLaTeX for generating documents that will be submitted through ATS systems.
+- Use default LaTeX packages available with pdfLaTeX.
 - Avoid any font that swaps letters for glyphs or uses advanced ligatures.
 
 ---
@@ -565,9 +602,9 @@ When submitting through ATS systems, use these safer alternatives:
 For maximum ATS compatibility with good visual design:
 
 1. **Fonts & Sizes**  
-   * **Body text:** **Arial or Helvetica 11 pt**  
+   * **Body text:** **Helvetica or Times Roman 11 pt** (via helvet or mathptmx packages)  
    * **Section headings:** **Same font, Bold, 14 pt**  
-   * **LaTeX engine:** pdfLaTeX (not XeLaTeX/LuaLaTeX)
+   * **LaTeX engine:** pdfLaTeX
    * Rationale: These fonts are universally recognized by ATS systems.
 
 2. **File Format**  
@@ -581,20 +618,20 @@ For maximum ATS compatibility with good visual design:
    * No tables, text boxes, graphics, or page borders.
 
 4. **Spacing & Margins**  
-   * Line spacing **1.3** (Exactly 15 pt in Word).  
-   * **6 pt** space *after* each paragraph; no extra space *before*.  
-   * Page margins **0.65 in** on all sides.
+   * Line spacing **1.3** (achieved with `\linespread{1.3}` in LaTeX).  
+   * **6 pt** space after each paragraph with `\setlength{\parskip}{6pt}`.  
+   * Page margins **0.65 in** on all sides using `\usepackage[margin=0.65in]{geometry}`.
 
 5. **Text Styling**  
-   * **Bold** section headings; keep body text regular weight.  
-   * Use **•** round bullets; avoid sub-bullets or icons.  
-   * Text color **#000000** on a white background—no shading or color accents.
+   * **Bold** section headings with `\textbf{}`.  
+   * Use basic bullets with `\usepackage{enumitem}`.  
+   * Text color black on white background—no shading or color accents.
 
-6. **Content Formatting**  
-   * Each bullet: **Action verb + metric + keyword**  
-     *Example:* "Deployed Docker-based FastAPI recommender, reducing latency **40 ms**."  
-   * Dates right-aligned in the same format (**Jan 2023 – Apr 2025**).  
-   * List acronyms once with the long form: "Natural Language Processing (**NLP**).".
+6. **LaTeX-Specific Tips**
+   * Use `\usepackage{hyperref}` for properly formatted links.
+   * Add `\usepackage[none]{hyphenat}` to prevent hyphenation issues.
+   * Consider `\usepackage{ragged2e}` for better text alignment.
+   * Include `\usepackage{microtype}` for improved typography and spacing.
 
 7. **File Naming Convention**  
    * `Lastname_Firstname_TargetRole.pdf`  
