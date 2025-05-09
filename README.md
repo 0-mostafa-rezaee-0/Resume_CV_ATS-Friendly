@@ -434,10 +434,10 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 ## 3.8. Advanced Optimization Tips  
 
 - **Mirror the job title** exactly once under your name if you're a close fit (e.g., *Machine Learning Engineer*).  
-- **Use both singular and plural forms** of core skills ("neural network," "neural networks").  
 - **Embed context keywords** in accomplishments, not just a skills list—ATS algorithms weight experience bullets more heavily.  
 - **Keep dates in the same format** (MM/YYYY or YYYY) throughout; inconsistent patterns can scramble timelines.  
 - **Refresh older roles** with 1-line summaries so long careers don't exceed two pages; ATS ranks recent matches higher.  
+- **Condense older positions** (7+ years old) into single-line summaries with just title, company, years, and one key achievement with relevant skills—focus detailed bullets on recent roles that ATS weights more heavily.
 
 ---
 
