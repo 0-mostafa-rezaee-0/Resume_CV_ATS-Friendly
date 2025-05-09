@@ -117,6 +117,8 @@ Getting started with this LaTeX resume environment is simple:
 
 # 1. About This Repository
 
+This repository serves as a comprehensive guide for creating professional, ATS-friendly resumes using LaTeX. It includes templates, best practices, and detailed instructions that help job seekers in the tech industry create resumes that pass through Applicant Tracking Systems while maintaining a professional appearance. The resources here are designed to be practical, actionable, and based on current industry standards.
+
 ## 1.1. Who Is This Tutorial For?
 
 This tutorial is designed for several groups of users:
@@ -195,6 +197,8 @@ Folder PATH listing
 ```
 
 # 2. LaTeX Environment Options
+
+Choosing the right LaTeX environment is crucial for creating professional resumes efficiently. This section outlines the recommended options for working with LaTeX, with a focus on reliability, ease of use, and compatibility with modern development tools. We'll explore both containerized solutions and web-based platforms to help you select the approach that best fits your workflow.
 
 ## 2.1. LaTeX Environment Choices
 
@@ -349,6 +353,8 @@ For most resume projects, the TeX Live 2025 environment recommended in section 2
 
 # 3. Applicant Tracking Systems (ATS)
 
+Understanding how Applicant Tracking Systems work is essential for creating resumes that successfully navigate the initial screening process. This section provides a comprehensive overview of ATS functionality, optimization strategies, and formatting rules that will help your resume reach human reviewers. Follow these guidelines to ensure your qualifications aren't filtered out by automated systems.
+
 ## 3.1. What is an ATS?
 
 An **Applicant Tracking System (ATS)** is software that employers use to manage job applications and screen candidates. Key facts:
@@ -444,16 +450,11 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
    - If everything pastes cleanly and in the right order, including your contact info and job history → you're likely safe
    - If text appears garbled, out of order, or some parts don't paste at all → not ATS-friendly
 
-   Here are examples of ATS-friendly and non-ATS-friendly resumes when pasted into Notepad:
-
-   <div align="center">
-       <img src="images/base-rover-on-notepad.jpg" alt="ATS-friendly resume in Notepad" width="50%">
-       <p><i>ATS-friendly resume pasted into Notepad - text is clean and properly formatted</i></p>
-   </div>
+   Here are an example of ATS-friendly resume when pasted into Notepad:
 
    <div align="center">
        <img src="images/fancy-rover-on-notepad.jpg" alt="Non-ATS-friendly resume in Notepad" width="50%">
-       <p><i>Non-ATS-friendly resume pasted into Notepad - text is garbled and unreadable</i></p>
+       <p><i>ATS-friendly resume pasted into Notepad - text is clean and properly formatted. However, if non-ATS-friendly resume pasted into Notepad, text will be garbled and unreadable.</i></p>
    </div>
 
 2. **Run a test scan** using one of the tools above.  
@@ -461,6 +462,8 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 4. **Confirm file name & format** follow the job posting instructions.  
 
 # 4. Best Examples
+
+Below are some outstanding examples of LaTeX resumes that demonstrate effective formatting, content organization, and ATS compatibility. These templates can serve as inspiration for creating your own professional resume. Each example shows how to balance visual appeal with machine readability—a critical consideration in today's job application process.
 
 - [GitHub Search: Popular LaTeX Resumes](https://github.com/search?q=stars%3A%3E10+forks%3A%3E10+language%3ATeX+resume&type=repositories&ref=advsearch&s=stars&o=desc)
 - [rover-resume](https://github.com/subidit/rover-resume)
@@ -470,11 +473,13 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
     <img src="images/base-rover.jpg" alt="base-rover" width="50%">
 </div>
 
+<div align="center">
+    <img src="images/fancy-rover.jpg" alt="fancy-rover" width="50%">
+</div>
+
 ## 5. Resume Font Guide  
 
-A resume's typography does more than look pretty—it determines whether your document is instantly readable by humans *and* correctly parsed by Applicant Tracking Systems (ATS). The rules that follow balance modern design with strict technical compatibility, so you can present a polished, professional image while ensuring every keyword survives the digital gatekeeper.  
-
----
+Typography plays a crucial role in creating effective resumes, impacting both human readability and ATS compatibility. The font choices you make can significantly influence how your resume is perceived by recruiters and processed by automated systems. This section provides comprehensive guidance on selecting appropriate fonts, understanding technical considerations, and implementing typography best practices.
 
 ## 5.1 Font Compatibility: LaTeX Engine Considerations
 
