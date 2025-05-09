@@ -15,7 +15,7 @@ This repository is based on a LaTeX Docker container which is very easy to use e
 
 This repository provides comprehensive resources and practical guidance for creating professional resumes targeted specifically at tech industry positions.
 
-## ⚡ Quick Start
+## Quick Start
 
 Getting started with this LaTeX resume environment is simple:
 
@@ -115,6 +115,8 @@ Getting started with this LaTeX resume environment is simple:
 </div>
 &nbsp;
 
+# 1. About This Repository
+
 ## 1.1. Who Is This Tutorial For?
 
 This tutorial is designed for several groups of users:
@@ -161,36 +163,35 @@ By following this repository's guidance, you will learn:
 
 ```
 Folder PATH listing
-+---.devcontainer                                  <-- Dev container config
-│       devcontainer.json                          <-- VS Code dev container settings
-│       docker-compose.yml                         <-- Docker compose configuration
-│       README.md                                  <-- Dev container documentation
++---.devcontainer                    <-- Dev container config
+│       devcontainer.json            <-- VS Code dev container settings
+│       docker-compose.yml           <-- Docker compose configuration
+│       README.md                    <-- Dev container documentation
 │
-+---ATS-Friendly-Templates                         <-- ATS-friendly resume templates
-│       base-rover.pdf                             <-- Base rover resume PDF
-│       base-rover.tex                             <-- Base rover resume LaTeX source
-│       fancy-rover-resume.pdf                     <-- Fancy rover resume PDF
-│       fancy-rover-resume.tex                     <-- Fancy rover resume LaTeX source
-│       README.md                                  <-- Templates documentation
++---ATS-Friendly-Templates           <-- ATS-friendly resume templates
+│       base-rover.pdf               <-- Base rover resume PDF
+│       base-rover.tex               <-- Base rover resume LaTeX source
+│       fancy-rover.pdf              <-- Fancy rover resume PDF
+│       fancy-rover.tex              <-- Fancy rover resume LaTeX source
+│       README.md                    <-- Templates documentation
 │
-+---docs                                           <-- Documentation files
-│       docker-compose-guide.md                    <-- Docker compose guide
-│       README.md                                  <-- Documentation overview
++---images                           <-- Image resources
+│       banner.png                   <-- Banner image
+│       base-rover.jpg               <-- Base rover template preview
+│       base-rover-on-notepad.jpg    <-- ATS compatibility example
+│       fancy-rover.jpg              <-- Fancy rover template preview
+│       fancy-rover-on-notepad.jpg   <-- Non-ATS compatible example
+│       README.md                    <-- Images documentation
 │
-+---images                                         <-- Image resources
-│       base-rover.jpg                             <-- Example image
-│       README.md                                  <-- Images documentation
++---personal-resumes                 <-- Personal resume examples
+│   +---Mostafa_base-rover           <-- Mostafa's base rover resume
+│   +---Mostafa_fancy-rover          <-- Mostafa's fancy rover resume
+│        README.md                   <-- Personal resumes overview
 │
-+---personal-resumes                               <-- Personal resume examples
-│   +---Archive                                    <-- Archived resume versions
-│   +---Mostafa_base-rover                         <-- Mostafa's base rover resume
-│   │
-│       README.md                                  <-- Personal resumes overview
-│
-│   .gitignore                                     <-- Git exclusions
-│   docker-compose.yml                             <-- Root Docker compose file (for quick dcu/dcd)
-│   LICENSE                                        <-- License information
-│   README.md                                      <-- Project overview
+│   .gitignore                       <-- Git exclusions
+│   docker-compose.yml               <-- Root Docker compose file (for quick dcu/dcd)
+│   LICENSE                          <-- License information
+│   README.md                        <-- Project overview
 ```
 
 # 2. LaTeX Environment Options
