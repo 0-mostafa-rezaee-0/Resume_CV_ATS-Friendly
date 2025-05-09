@@ -36,23 +36,22 @@ Getting started with this LaTeX resume environment is simple:
 4. **Start Container (Two Methods)**:
    
    **Method 1 - Using Dev Containers (Recommended):**
-   - If prompted, select "Reopen in Container"
-   - If not prompted, press `Ctrl+Shift+P` then select "Dev Containers: Rebuild and Reopen in Container"
+   - If prompted, select `Reopen in Container`
+   - If not prompted, press `Ctrl+Shift+P` then select `Dev Containers: Rebuild and Reopen in Container`
    - **Shutdown**: Simply close the editor window when finished - it will automatically handle stopping the container
    
    **Method 2 - Using Docker Compose:**
-   ```bash
-   # Start the container from the terminal
-   docker-compose up -d --build  # or use alias: dcu
+   - Start the container from the terminal: `docker-compose up -d --build`
+   - **Shutdown**: Simply close the editor window when finished - it will automatically handle stopping the container
    
-   # When finished, shut down the container
-   docker-compose down  # or use alias: dcd
-   ```
-
 5. **Edit LaTeX Files**:
-   - Navigate to LaTeX directory and edit .tex files
-   - Changes are automatically saved to your local workspace
-   - Use Copilot and other extensions to enhance your LaTeX writing
+   - Navigate to the `personal-resume` directory and create a separate folder for each resume you want to make. This keeps your files organized, as each `.tex` file generates multiple supporting files when compiled.
+   - Copy a `.tex` template from the `ATS-Friendly-Templates` folder into your new resume folder inside `personal-resumes`.
+   - Click the play button in the top right to compile the `.tex` file. You only need to do this once - after that, it will compile automatically when you make changes.
+   - Open the `.pdf` file next to your `.tex` file to view your resume. Unlike Overleaf, you'll see all changes update instantly in the PDF as you edit.
+   - All changes are automatically saved to your local workspace.
+   - Use Copilot and other extensions to help you write better LaTeX code.
+   - **Important:** Enable Auto Save in VS Code/Cursor by going to File > Auto Save. This prevents losing your work and only needs to be set up once - it will apply to all files and repositories.
 
 ***Table of Contents***
 
