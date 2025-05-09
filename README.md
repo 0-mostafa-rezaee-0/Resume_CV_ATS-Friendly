@@ -499,7 +499,7 @@ Below are some outstanding examples of LaTeX resumes that demonstrate effective 
 
 Typography and layout play crucial roles in creating effective resumes, impacting both human readability and ATS compatibility. The design choices you make can significantly influence how your resume is perceived by recruiters and processed by automated systems. This section provides comprehensive guidance on selecting appropriate fonts for pdfLaTeX and implementing typography and layout best practices.
 
-## 5.1 Font Compatibility with pdfLaTeX
+## 5.1. Font Compatibility with pdfLaTeX
 
 > **IMPORTANT ATS COMPATIBILITY NOTE**
 >
@@ -508,7 +508,7 @@ Typography and layout play crucial roles in creating effective resumes, impactin
 > **For maximum ATS compatibility**, use pdfLaTeX with standard fonts that are natively supported by this engine.
 >
 
-### Standard Font Packages for pdfLaTeX
+### 5.1.1. Standard Font Packages for pdfLaTeX
 
 pdfLaTeX works with several font packages that provide excellent alternatives to the default Computer Modern:
 
@@ -535,7 +535,7 @@ pdfLaTeX works with several font packages that provide excellent alternatives to
 \usepackage{ebgaramond}
 ```
 
-### ATS-Safe Recommendations (For Job Applications)
+### 5.1.2. ATS-Safe Recommendations (For Job Applications)
 
 When submitting through ATS systems, use these safe font choices:
 
@@ -545,7 +545,7 @@ When submitting through ATS systems, use these safe font choices:
 
 ---
 
-## 5.2 Fonts to Avoid (and Why)  
+## 5.2. Fonts to Avoid (and Why)  
 
 - **Comic Sans / Papyrus** – Unprofessional; credibility killer.  
 - **Display or script faces** – Contain non-standard ligatures that can scramble ATS parsing.  
@@ -555,7 +555,7 @@ When submitting through ATS systems, use these safe font choices:
 
 ---
 
-## 5.3 pdfLaTeX-Compatible Fonts (ATS-Friendly)
+## 5.3. pdfLaTeX-Compatible Fonts (ATS-Friendly)
 
 | Font Package     | Style      | Best Use & Rationale                                        | ATS Compatibility |
 |------------------|------------|-----------------------------------------------------------|-------------------|
@@ -579,7 +579,7 @@ When submitting through ATS systems, use these safe font choices:
 
 ---
 
-## 5.4 Typography Best Practices for ATS Compatibility  
+## 5.4. Typography Best Practices for ATS Compatibility  
 
 | Best Practice | Implementation in LaTeX | ATS Benefit |
 |---------------|-------------------------|-------------|
