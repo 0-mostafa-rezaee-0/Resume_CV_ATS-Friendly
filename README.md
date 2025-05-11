@@ -424,9 +424,9 @@ Think of an ATS as a **digital gatekeeper** that determines if your resume reach
 
 | Tool | What It Does | How to Use |
 |------|--------------|-----------|
-| **[Jobscan](https://www.jobscan.co/)** | Compares a résumé to a specific job description; returns a match score and keyword gaps :contentReference[oaicite:0]{index=0} | Iteratively tweak until you reach ≥ 75 % match |
-| **[Resume Worded](https://resumeworded.com/)**  /  **[TopResume](https://topresume.com/resume-review)** | Free résumé graders that flag formatting and ATS issues :contentReference[oaicite:1]{index=1} | Upload your file, apply the fixes they suggest, then rescan |
-| **[Indeed "Preview Résumé"](https://support.indeed.com/hc/en-us/articles/28827071763981-Resume-Options-Menu-Managing-a-Resume)** | Shows how Indeed's ATS will parse your document before you submit :contentReference[oaicite:2]{index=2} | Paste or upload your résumé text and check for missing fields |
+| **[Jobscan](https://www.jobscan.co/)** | Compares a résumé to a specific job description; returns a match score and keyword gaps | Iteratively tweak until you reach ≥ 75 % match |
+| **[Resume Worded](https://resumeworded.com/)**  /  **[TopResume](https://topresume.com/resume-review)** | Free résumé graders that flag formatting and ATS issues | Upload your file, apply the fixes they suggest, then rescan |
+| **[Indeed "Preview Résumé"](https://support.indeed.com/hc/en-us/articles/28827071763981-Resume-Options-Menu-Managing-a-Resume)** | Shows how Indeed's ATS will parse your document before you submit | Paste or upload your résumé text and check for missing fields |
 
 
 ---
