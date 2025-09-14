@@ -99,7 +99,7 @@ Getting started with this LaTeX resume environment is simple:
 &nbsp;
 
 <details>
-  <summary><a href="#5-resume-font-guide"><i><b>5. Resume Typography and Layout Guide</b></i></a></summary>
+  <summary><a href="#5-resume-typography-and-layout-guide"><i><b>5. Resume Typography and Layout Guide</b></i></a></summary>
   <div>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#51-font-compatibility-with-pdflatex">5.1. Font Compatibility with pdfLaTeX</a><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#52-fonts-to-avoid-and-why">5.2. Fonts to Avoid (and Why)</a><br>
