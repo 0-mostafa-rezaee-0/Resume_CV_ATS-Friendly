@@ -1,6 +1,13 @@
 services:
   latex:
     image: texlive/texlive:latest
+    # --- Permissions fix: ensure container writes as your Linux user (not root) ---
+    # These values come from .env (UID/GID) so new files in the bind mount
+    # are owned by you on WSL, preventing future permission issues.
+    # If .env is not present, default to UID/GID 1000 (typical WSL user)
+    user: "${UID:-1000}:${GID:-1000}"
+    # Align the default working directory with the bind mount below.
+    working_dir: /workspaces
     volumes:
       - .:/workspaces:cached
       - latex-extensions:/root/.vscode-server/extensions
@@ -9,7 +16,7 @@ services:
     environment:
       - TZ=UTC
       - DOCKER_HOST=unix:///var/run/docker.sock
-    
+
 volumes:
   latex-extensions:
-  latex-insiders-extensions: 
+  latex-insiders-extensions:
