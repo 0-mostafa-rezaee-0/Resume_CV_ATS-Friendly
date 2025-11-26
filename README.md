@@ -19,39 +19,80 @@ This repository provides comprehensive resources and practical guidance for crea
 
 Getting started with this LaTeX resume environment is simple:
 
-1. **Prerequisites**: Install [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Cursor](https://cursor.sh/) or VS Code with Dev Containers extension
+1. **Prerequisites**  
+   Install:  
+   - [Docker Desktop](https://www.docker.com/products/docker-desktop/)  
+   - Cursor **or** VS Code with the **Dev Containers** extension
 
-2. **Clone Repository**:
+2. **Clone Repository**
    ```bash
-   # Clone this repository 
    git clone <repository-url>
    cd Resume_CV_ATS-Friendly
+   ````
+
+3. **Open in Editor**
+
+   * Cursor: `cursor .`
+   * VS Code: `code .`
+   * Or open the folder from the GUI
+
+4. **Start Container (Two Methods)**
+
+   ### Method 1 — Dev Containers (Recommended)
+
+   When you open the folder, **VS Code will show a popup in the bottom-left corner**:
+
+   👉 **REOPEN IN CONTAINER**
+
+   **Just click it. That’s all you need. Enjoy.**
+   VS Code will automatically build the full LaTeX environment for you.
+
+   If the popup doesn’t appear:
+   `Ctrl+Shift+P` → **Dev Containers: Rebuild and Reopen in Container**
+
+   **Shutdown:** Close the editor window — the container stops automatically.
+
+   ### Method 2 — Docker Compose
+
+   ```bash
+   docker-compose up -d --build
    ```
 
-3. **Open in Editor**:
-   - Open with Cursor: `cursor .` 
-   - Open with VS Code: `code .`
-   - Or use the editor's GUI to open the folder
+   **Shutdown:** Close the editor window — it will stop the container automatically.
 
-4. **Start Container (Two Methods)**:
-   
-   **Method 1 - Using Dev Containers (Recommended):**
-   - If prompted, select `Reopen in Container`
-   - If not prompted, press `Ctrl+Shift+P` then select `Dev Containers: Rebuild and Reopen in Container`
-   - **Shutdown**: Simply close the editor window when finished - it will automatically handle stopping the container
-   
-   **Method 2 - Using Docker Compose:**
-   - Start the container from the terminal: `docker-compose up -d --build`
-   - **Shutdown**: Simply close the editor window when finished - it will automatically handle stopping the container
-   
-5. **Edit LaTeX Files**:
-   - Navigate to the `personal-resume` directory and create a separate folder for each resume you want to make. This keeps your files organized, as each `.tex` file generates multiple supporting files when compiled.
-   - Copy a `.tex` template from the `ATS-Friendly-Templates` folder into your new resume folder inside `personal-resumes`.
-   - Click the play button in the top right to compile the `.tex` file. You only need to do this once - after that, it will compile automatically when you make changes.
-   - Open the `.pdf` file next to your `.tex` file to view your resume. Unlike Overleaf, you'll see all changes update instantly in the PDF as you edit.
-   - All changes are automatically saved to your local workspace.
-   - Use Copilot and other extensions to help you write better LaTeX code.
-   - **Important:** Enable Auto Save in VS Code/Cursor by going to File > Auto Save. This prevents losing your work and only needs to be set up once - it will apply to all files and repositories.
+---
+
+5. **Edit LaTeX Files**
+
+   * Go to the `personal-resume` directory and create a separate folder for each resume.
+     (Each `.tex` file generates extra build files — this keeps everything clean and organized.)
+   * Copy a `.tex` template from `ATS-Friendly-Templates` into your new resume folder.
+   * Click the **Compile (▶️)** button once. After that, it auto-builds on save.
+   * Open the generated `.pdf` to see instant updates — much faster and smoother than Overleaf.
+   * All changes are saved directly to your local workspace.
+   * Use Copilot and other extensions to refine your writing.
+   * **Important:** Enable **File → Auto Save** once. This protects you from losing any progress across all repos.
+
+---
+
+## Recommended LaTeX Extension for VS Code
+
+For the best LaTeX editing experience inside the container, install **LaTeX Workshop**.
+
+**Extension Info**
+
+* **Name:** LaTeX Workshop
+* **ID:** James-Yu.latex-workshop
+* **Marketplace:** Available on the VS Code Marketplace
+
+**Key Features**
+
+* Live PDF preview with forward & inverse sync
+* Auto-build on save
+* Syntax highlighting and rich snippets
+* IntelliSense for citations, labels, and references
+* Works flawlessly on Windows, WSL, and inside Dev Containers
+
 
 ***Table of Contents***
 
