@@ -60,8 +60,6 @@ Getting started with this LaTeX resume environment is simple:
 
    **Shutdown:** Close the editor window — it will stop the container automatically.
 
----
-
 5. **Edit LaTeX Files**
 
    * Go to the `personal-resume` directory and create a separate folder for each resume.
@@ -73,26 +71,29 @@ Getting started with this LaTeX resume environment is simple:
    * Use Copilot and other extensions to refine your writing.
    * **Important:** Enable **File → Auto Save** once. This protects you from losing any progress across all repos.
 
+6. **Install LaTeX Workshop Extension (Recommended)**
+
+   For the best LaTeX editing experience, install the **LaTeX Workshop** extension:
+   * **Name:** LaTeX Workshop
+   * **ID:** James-Yu.latex-workshop
+   * **Marketplace:** Available on the VS Code Marketplace
+
+   **Key Features:**
+   * Live PDF preview with forward & inverse sync
+   * Auto-build on save
+   * Syntax highlighting + rich snippet library
+   * IntelliSense for citations, labels, references
+   * Works seamlessly with Windows, WSL, and Dev Containers
+
+7. **Fix Git Issues (If Needed)**
+
+   If you encounter Git errors like "dubious ownership" or "cannot run ssh" when using `git pull` or `git push`, run the fix script:
+   ```bash
+   ./fix-git-ownership.sh
+   ```
+   This script fixes Git permission and SSH connection issues in the Docker container. You only need to run it once.
+
 ---
-
-## Recommended LaTeX Extension for VS Code
-
-For the best LaTeX editing experience inside the container, install **LaTeX Workshop**.
-
-**Extension Info**
-
-* **Name:** LaTeX Workshop
-* **ID:** James-Yu.latex-workshop
-* **Marketplace:** Available on the VS Code Marketplace
-
-**Key Features**
-
-* Live PDF preview with forward & inverse sync
-* Auto-build on save
-* Syntax highlighting and rich snippets
-* IntelliSense for citations, labels, and references
-* Works flawlessly on Windows, WSL, and inside Dev Containers
-
 
 ***Table of Contents***
 
