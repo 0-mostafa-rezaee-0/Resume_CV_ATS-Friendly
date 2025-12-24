@@ -91,7 +91,7 @@ Getting started with this LaTeX resume environment is simple:
    ```bash
    ./fix-git-ownership.sh
    ```
-   This script fixes Git permission and SSH connection issues in the Docker container. You only need to run it once.
+   This script automatically detects your current directory and Git remote URL, then fixes Git permission and SSH connection issues in the Docker container. You only need to run it once per project.
 
 ---
 
